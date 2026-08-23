@@ -774,9 +774,13 @@
                 };
 
                 attemptPlay();
-                document.addEventListener('touchstart', attemptPlay, { once: true, passive: true });
-                document.addEventListener('scroll', attemptPlay, { once: true, passive: true });
-                document.addEventListener('click', attemptPlay, { once: true, passive: true });
+                window.addEventListener('load', attemptPlay);
+                document.addEventListener('visibilitychange', () => {
+                    if (!document.hidden) attemptPlay();
+                });
+                document.addEventListener('touchstart', attemptPlay, { passive: true });
+                document.addEventListener('scroll', attemptPlay, { passive: true });
+                document.addEventListener('click', attemptPlay, { passive: true });
             });
 
             // DUAL-MODE CINEMAGRAPH & 3D RUNWAY STRIDE PHYSICS ENGINE FOR CHAPTER 07
