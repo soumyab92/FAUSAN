@@ -343,7 +343,13 @@ video {
     height: 100%;
     z-index: 0;
     overflow: hidden;
-    background: #060608 url('../images/og-image.jpg') center/cover no-repeat;
+    background: #060608 url('../images/hero-model-runway-mobile.gif') center/cover no-repeat;
+}
+
+@media (min-width: 768px) {
+    .hero-bg-video-wrapper {
+        background-image: url('../images/hero-model-runway.gif');
+    }
 }
 
 .hero-bg-video {
