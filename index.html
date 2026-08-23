@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAUSAN DRESS — Scroll-Controlled 3D Cinematic Haute Couture</title>
+    <meta name="description"
+        content="FAUSAN DRESS — A premier luxury haute couture atelier exploring silhouette, movement, and light through interactive 3D digital design.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- External Libraries CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- External Luxury Design System Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Reading Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Interactive 3D WebGL Canvas Layer -->
+    <div id="webgl-container">
+        <canvas id="webgl-canvas"></canvas>
+    </div>
+
+    <!-- Custom Desktop Gold Cursor -->
+    <div class="custom-cursor" id="cursor-dot"></div>
+    <div class="cursor-follower" id="cursor-ring">
+        <span class="cursor-text" id="cursor-text">VIEW</span>
+    </div>
+
+    <!-- Atmospheric Overlays -->
+    <div class="overlay-grain"></div>
+    <div class="overlay-vignette"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#" class="nav-logo magnetic-btn">FAUSAN</a>
+        <ul class="nav-links">
+            <li><a href="#chapter-silhouette" class="magnetic-btn">SILHOUETTE</a></li>
+            <li><a href="#chapter-fabric" class="magnetic-btn">FABRIC</a></li>
+            <li><a href="#chapter-collection" class="magnetic-btn">COLLECTION</a></li>
+            <li><a href="#chapter-product" class="magnetic-btn">ECLIPSE</a></li>
+            <li><a href="#contact" class="magnetic-btn" id="nav-inquire-btn">INQUIRE</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobile-toggle">MENU</button>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+        <a href="#chapter-silhouette" class="mobile-link">SILHOUETTE</a>
+        <a href="#chapter-fabric" class="mobile-link">FABRIC</a>
+        <a href="#chapter-collection" class="mobile-link">COLLECTION</a>
+        <a href="#chapter-product" class="mobile-link">ECLIPSE</a>
+        <a href="#contact" class="mobile-link" id="mobile-inquire-btn">INQUIRE</a>
+    </div>
+
+    <!-- Main Story Container -->
+    <main class="story-container">
+
+        <!-- CHAPTER 01: HERO ARRIVAL WITH USER'S FULL BODY 3D VIDEO -->
+        <section class="chapter" id="chapter-arrival">
+            <div class="hero-bg-video-wrapper">
+                <video class="hero-bg-video" id="hero-bg-video" autoplay muted loop playsinline preload="auto">
+                    <source src="assets/videos/Full_body_front_facing_camera (1).mp4" type="video/mp4">
+                    <source src="assets/videos/Full_body_front_facing_camera.mp4" type="video/mp4">
+                    <source src="assets/videos/hero-fashion.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="hero-glass-box">
+                <span class="hero-badge">HAUTE COUTURE 2026</span>
+                <h1 class="hero-title">FAUSAN</h1>
+                <p class="hero-tagline">THE ART OF MOVEMENT</p>
+                <a href="#chapter-silhouette" class="btn-luxury magnetic-btn">EXPLORE COLLECTION</a>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL TO DISCOVER</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 02: SILHOUETTE -->
+        <section class="chapter" id="chapter-silhouette">
+            <div class="chapter-content">
+                <span class="chapter-label">CHAPTER 01</span>
+                <h2 class="chapter-title">SILHOUETTE</h2>
+                <p class="chapter-subtitle">"Designed around the fluid geometry of physical movement."</p>
+
+                <div class="model-runner-card">
+                    <img class="model-runner-img"
+                        src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1600&q=80"
+                        alt="MODEL IN HAUTE COUTURE DRESS">
+                    <div class="model-runner-caption">
+                        <span class="chapter-label" style="margin-bottom:6px;">DYNAMIC FORM</span>
+                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Where
+                            structural boning transitions into effortless cadence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 03: FABRIC -->
+        <section class="chapter" id="chapter-fabric">
+            <div class="chapter-content">
+                <span class="chapter-label">CHAPTER 02</span>
+                <h2 class="chapter-title">FABRIC</h2>
+                <p class="chapter-subtitle">"Where organic texture becomes an expressive identity."</p>
+
+                <div class="video-narrative-container">
+                    <img class="video-fallback-img"
+                        src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=80"
+                        alt="HAUTE COUTURE SILK FABRIC">
+                    <video class="video-narrative-element" id="video-fabric" autoplay muted loop playsinline
+                        preload="metadata">
+                        <source src="assets/videos/Full_body_front_facing_camera (1).mp4" type="video/mp4">
+                        <source src="assets/videos/Full_body_front_facing_camera.mp4" type="video/mp4">
+                        <source src="assets/videos/fabric-motion.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay-caption">
+                        <span class="chapter-label" style="margin-bottom:6px;">TACTILE COUTURE</span>
+                        <p style="font-size:0.85rem; letter-spacing:1px; color:#D5D4D0;">Silk crepe de chine woven with
+                            micro-sculptural memory tension.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 04: CRAFT -->
+        <section class="chapter" id="chapter-craft">
+            <div class="chapter-content">
+                <span class="chapter-label">CHAPTER 03</span>
+                <h2 class="chapter-title">CRAFT</h2>
+                <p class="chapter-subtitle">"Every seam holds intention. 180 hours of hand-sculpted atelier
+                    craftsmanship."</p>
+
+                <div class="model-runner-card">
+                    <img class="model-runner-img"
+                        src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1600&q=80"
+                        alt="ATELIER CRAFTSMANSHIP DETAILS">
+                    <div class="model-runner-caption">
+                        <span class="chapter-label" style="margin-bottom:6px;">HAND EMBROIDERY</span>
+                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Intricate gold
+                            metallic threading sewn frame by frame by Parisian master artisans.</p>
+                    </div>
+                </div>
+
+                <div class="atelier-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-val">180 HRS</div>
+                        <div class="stat-label">Hand Stitching</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-val">100%</div>
+                        <div class="stat-label">Mulberry Silk</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-val">PARIS</div>
+                        <div class="stat-label">Atelier Origin</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 05: MATERIAL -->
+        <section class="chapter" id="chapter-material">
+            <div class="chapter-content">
+                <span class="chapter-label">CHAPTER 04</span>
+                <h2 class="chapter-title">MATERIAL</h2>
+                <p class="chapter-subtitle">"Designed to interact with light, shadow, and touch."</p>
+
+                <div class="model-runner-card">
+                    <img class="model-runner-img"
+                        src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1600&q=80"
+                        alt="LUXURY MATERIAL DRAPE">
+                    <div class="model-runner-caption">
+                        <span class="chapter-label" style="margin-bottom:6px;">LIGHT REFLECTION</span>
+                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Specially
+                            treated silk fibers engineered for high volumetric rim light responsiveness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 06: MOVEMENT -->
+        <section class="chapter" id="chapter-movement">
+            <div class="chapter-content">
+                <span class="chapter-label">CHAPTER 05</span>
+                <h2 class="chapter-title">MOVEMENT</h2>
+                <p class="chapter-subtitle">"Made to move seamlessly with your natural cadence."</p>
+
+                <div class="model-runner-card">
+                    <img class="model-runner-img"
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80"
+                        alt="FAUSAN COUTURE MODEL MOVEMENT">
+                    <div class="model-runner-caption">
+                        <span class="chapter-label" style="margin-bottom:6px;">SILK IN FLIGHT</span>
+                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Unrestricted
+                            silhouette crafted for weightless rotation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 07: SCROLL-CONTROLLED 3D VIDEO SCRUBBING -->
+        <section class="chapter" id="chapter-campaign">
+            <div class="scroll-video-wrapper" id="scroll-wrapper-3d">
+
+                <!-- Volumetric Runway Atmosphere & Laser Floor Guides -->
+                <div class="runway-light-beam"></div>
+                <div class="runway-laser-left"></div>
+                <div class="runway-laser-right"></div>
+
+                <!-- Sleek Telemetry HUDs -->
+                <div class="telemetry-hud hud-tl">
+                    <span class="telemetry-dot-pulse"></span>
+                    <span>RUNWAY 3D ENGINE • V2.6</span>
+                </div>
+                <div class="telemetry-hud hud-tr">CHAPTER 06 // MOTION</div>
+                <div class="telemetry-hud hud-bl" id="hud-depth-label">DEPTH: +0.00M (0%)</div>
+
+                <!-- Interactive Runway Timeline Scrubber (Bottom Center) -->
+                <div class="runway-timeline-container">
+                    <span class="runway-time-text" id="runway-time-cur">00:00.0s</span>
+                    <div class="runway-timeline-track">
+                        <div class="runway-timeline-fill" id="runway-timeline-fill"></div>
+                    </div>
+                    <span class="runway-time-text" id="runway-time-total">00:10.0s</span>
+                </div>
+
+                <video class="scroll-video-element" id="scroll-video" muted playsinline loop preload="auto">
+                    <source src="assets/videos/Full_body_front_facing_camera (1).mp4" type="video/mp4">
+                    <source src="assets/videos/Full_body_front_facing_camera.mp4" type="video/mp4">
+                    <source src="assets/videos/campaign.mp4" type="video/mp4">
+                </video>
+
+                <div class="scroll-video-caption" id="scroll-video-caption">
+                    <span class="scroll-badge">3D SCROLL-CONTROLLED RUNNER</span>
+                    <h2 class="chapter-title" style="font-size:clamp(2.5rem, 5vw, 4.5rem); margin-bottom:15px;">FAUSAN
+                        IN MOTION</h2>
+                    <p
+                        style="font-size:0.88rem; letter-spacing:2px; color:var(--text-secondary); text-transform:uppercase;">
+                        SCROLL UP & DOWN TO CONTROL 3D MODEL RUNNER
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 08: COLLECTION -->
+        <section class="chapter" id="chapter-collection">
+            <div class="chapter-content" style="max-width:1200px;">
+                <span class="chapter-label">CURATED PIECES</span>
+                <h2 class="chapter-title">THE COLLECTION</h2>
+
+                <div class="editorial-grid">
+                    <div class="grid-item grid-item-1 interactive-hover collection-item" data-title="THE ECLIPSE DRESS"
+                        data-price="₹ 185,000">
+                        <div class="grid-item-visual"
+                            style="background-image: url('https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80');">
+                        </div>
+                        <div class="grid-item-info">
+                            <span class="grid-item-num">NO. 01</span>
+                            <h3 class="grid-item-name">THE ECLIPSE DRESS</h3>
+                        </div>
+                    </div>
+
+                    <div class="grid-item grid-item-2 interactive-hover collection-item" data-title="SOLAR SILHOUETTE"
+                        data-price="₹ 210,000">
+                        <div class="grid-item-visual"
+                            style="background-image: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80');">
+                        </div>
+                        <div class="grid-item-info">
+                            <span class="grid-item-num">NO. 02</span>
+                            <h3 class="grid-item-name">SOLAR SILHOUETTE</h3>
+                        </div>
+                    </div>
+
+                    <div class="grid-item grid-item-3 interactive-hover collection-item" data-title="OBSIDIAN DRAPE"
+                        data-price="₹ 165,000">
+                        <div class="grid-item-visual"
+                            style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80');">
+                        </div>
+                        <div class="grid-item-info">
+                            <span class="grid-item-num">NO. 03</span>
+                            <h3 class="grid-item-name">OBSIDIAN DRAPE</h3>
+                        </div>
+                    </div>
+
+                    <div class="grid-item grid-item-4 interactive-hover collection-item" data-title="NOCTURNE VELVET"
+                        data-price="₹ 195,000">
+                        <div class="grid-item-visual"
+                            style="background-image: url('https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80');">
+                        </div>
+                        <div class="grid-item-info">
+                            <span class="grid-item-num">NO. 04</span>
+                            <h3 class="grid-item-name">NOCTURNE VELVET</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 09: PRODUCT FEATURE -->
+        <section class="chapter" id="chapter-product">
+            <div class="product-feature-card">
+                <div class="product-gallery">
+                    <img class="product-gallery-img"
+                        src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80"
+                        alt="THE ECLIPSE DRESS HAUTE COUTURE">
+                </div>
+                <div class="product-details">
+                    <span class="chapter-label">HERO EDITION</span>
+                    <h2 class="chapter-title" style="font-size:2.6rem; margin-bottom:10px;">THE ECLIPSE DRESS</h2>
+                    <p class="product-price">₹ 185,000</p>
+                    <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; font-weight:300;">
+                        An exploration of architectural silhouette, organic fluid movement, and dramatic rim lighting.
+                        Sculpted with midnight silk crepe and structural boning.
+                    </p>
+
+                    <div class="product-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Material</span>
+                            <span class="spec-val">100% Organic Mulberry Silk Crepe</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Atelier</span>
+                            <span class="spec-val">Handcrafted in Paris</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Edition</span>
+                            <span class="spec-val">Limited (12 Bespoke Pieces)</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-luxury magnetic-btn" id="discover-dress-btn"
+                        style="width:100%; margin-top:10px;">DISCOVER THE DRESS</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER 10: FINAL STATEMENT -->
+        <section class="chapter" id="chapter-final">
+            <div class="chapter-content">
+                <span class="chapter-label">THE ENDLESS MOMENT</span>
+                <h2 class="chapter-title" style="font-size: clamp(2.8rem, 5.8vw, 5.8rem);">WEAR THE MOMENT.</h2>
+                <button class="btn-luxury magnetic-btn" id="final-inquire-btn" style="margin-top:20px;">BESPOKE
+                    INQUIRY</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- WEB3 LUXURY HAUTE COUTURE FOOTER -->
+    <footer class="footer-web3">
+        <div class="footer-grid">
+            <!-- Col 1: Brand & Web3 Status -->
+            <div class="footer-col-brand">
+                <h3 class="footer-logo">FAUSAN</h3>
+                <div class="web3-badge">
+                    <span class="badge-dot"></span>
+                    <span>ETH MAINNET ATELIER #0048</span>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; max-width:320px;">
+                    A premier digital haute couture house pioneering 3D procedural tailoring, spatial wearables, and
+                    ERC-721 tokenized garment ownership.
+                </p>
+            </div>
+
+            <!-- Col 2: Digital Atelier Links -->
+            <div>
+                <h4 class="footer-col-title">ATELIER</h4>
+                <ul class="footer-links">
+                    <li><a href="#chapter-silhouette">3D Silhouette</a></li>
+                    <li><a href="#chapter-fabric">Silk Draping</a></li>
+                    <li><a href="#chapter-collection">Lookbook 2026</a></li>
+                    <li><a href="#chapter-product">The Eclipse Piece</a></li>
+                    <li><a href="#chapter-campaign">Spatial Runway</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Web3 Ownership -->
+            <div>
+                <h4 class="footer-col-title">WEB3 PROTOCOL</h4>
+                <ul class="footer-links">
+                    <li><a href="#">ERC-721 Couture</a></li>
+                    <li><a href="#">Digital Twin Verification</a></li>
+                    <li><a href="#">IPFS Provenance</a></li>
+                    <li><a href="#">Metaverse Wearables</a></li>
+                    <li><a href="#">Smart Concierge</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Private Whitelist -->
+            <div>
+                <h4 class="footer-col-title">PRIVATE WHITELIST</h4>
+                <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:15px; line-height:1.5;">
+                    Receive private mint allocations and bespoke Paris atelier fitting invitations.
+                </p>
+                <form id="footer-whitelist-form"
+                    onsubmit="event.preventDefault(); alert('Whitelisted for Bespoke Fitting!');">
+                    <input type="email" class="footer-newsletter-input" placeholder="Enter Wallet / Email..." required>
+                    <button type="submit" class="btn-luxury magnetic-btn" style="width:100%; padding:14px;">JOIN
+                        WHITELIST</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>© 2026 FAUSAN DRESS HAUTE COUTURE. ALL RIGHTS RESERVED.</div>
+            <div style="display:flex; gap:25px;">
+                <a href="#" style="color:var(--text-secondary); text-decoration:none;">PRIVACY</a>
+                <a href="#" style="color:var(--text-secondary); text-decoration:none;">PROVENANCE</a>
+                <a href="#" style="color:var(--text-secondary); text-decoration:none;">TERMS</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top">↑ TOP</button>
+
+    <!-- Interactive Bespoke Order & Inquiry Modal -->
+    <div class="modal-overlay" id="inquiry-modal">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modal-close">✕</button>
+            <span class="chapter-label" style="margin-bottom:8px;">HAUTE COUTURE BESPOKE</span>
+            <h3 class="chapter-title" id="modal-item-title" style="font-size:2.2rem; margin-bottom:10px;">INQUIRE FOR
+                BESPOKE FIT</h3>
+            <p id="modal-item-price"
+                style="color:var(--accent-gold); letter-spacing:2px; font-size:1.05rem; margin-bottom:20px;">₹ 185,000
+            </p>
+
+            <form id="inquiry-form">
+                <input type="text" class="modal-input" placeholder="Your Full Name" required>
+                <input type="email" class="modal-input" placeholder="Email Address" required>
+
+                <span class="spec-label" style="display:block; margin-bottom:10px;">Select Atelier Size:</span>
+                <div class="size-selector">
+                    <button type="button" class="size-btn selected">EU 36</button>
+                    <button type="button" class="size-btn">EU 38</button>
+                    <button type="button" class="size-btn">EU 40</button>
+                    <button type="button" class="size-btn">Bespoke Fitting</button>
+                </div>
+
+                <button type="submit" class="btn-luxury magnetic-btn" style="width:100%;">REQUEST ATELIER
+                    APPOINTMENT</button>
+            </form>
+            <div id="modal-success-msg" style="display:none; text-align:center; padding:30px 0;">
+                <h4
+                    style="font-family:var(--font-title); font-size:1.6rem; color:var(--accent-gold); margin-bottom:10px;">
+                    APPOINTMENT REQUESTED</h4>
+                <p style="color:var(--text-secondary); font-size:0.9rem;">Our Paris Haute Couture atelier concierge will
+                    contact you within 24 hours.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    ==========================================================================
+    JAVASCRIPT ENGINE & THREE.JS 3D ENVIRONMENT
+    ==========================================================================
+    -->
+    <script>
+        const FAUSAN_ASSETS = {
+            logo: "",
+            dressModel: "",
+            heroVideo: "assets/videos/Full_body_front_facing_camera.mp4",
+            fabricVideo: "assets/videos/Full_body_front_facing_camera.mp4",
+            detailVideo: "assets/videos/detail.mp4",
+            campaignVideo: "assets/videos/Full_body_front_facing_camera.mp4",
+            finalVideo: "assets/videos/final-film.mp4"
+        };
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        }
+
+        // ==========================================================================
+        // 1. THREE.JS LUXURY 3D GOWN ENGINE
+        // ==========================================================================
+        let scene, camera, renderer, dressGroup, particleSystem;
+        let ambientLight, keyLight, rimLight;
+
+        function initThreeJS() {
+            const canvas = document.getElementById('webgl-canvas');
+            if (!canvas || typeof THREE === 'undefined') return;
+
+            scene = new THREE.Scene();
+            scene.fog = new THREE.FogExp2(0x060608, 0.035);
+
+            camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.set(0, 0, 7.5);
+
+            renderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                antialias: true,
+                alpha: true,
+                powerPreference: "high-performance"
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.toneMappingExposure = 1.25;
+
+            // Lights
+            ambientLight = new THREE.AmbientLight(0x222233, 0.7);
+            scene.add(ambientLight);
+
+            keyLight = new THREE.DirectionalLight(0xF4F1EA, 1.8);
+            keyLight.position.set(4, 5, 5);
+            scene.add(keyLight);
+
+            rimLight = new THREE.DirectionalLight(0xD4AF37, 3.5);
+            rimLight.position.set(-5, 3, -4);
+            scene.add(rimLight);
+
+            dressGroup = new THREE.Group();
+            scene.add(dressGroup);
+
+            createProceduralGown();
+            createAtmosphericParticles();
+            window.addEventListener('resize', onWindowResize);
+        }
+
+        function createProceduralGown() {
+            const skirtPoints = [];
+            for (let i = 0; i < 60; i++) {
+                const t = i / 59;
+                let radius;
+                if (t < 0.25) {
+                    radius = 0.28 + 0.1 * Math.sin(t * Math.PI * 4);
+                } else {
+                    const st = (t - 0.25) / 0.75;
+                    radius = 0.35 + 0.9 * Math.pow(st, 2.2);
+                }
+                const y = (0.5 - t) * 3.8;
+                skirtPoints.push(new THREE.Vector2(radius, y));
+            }
+
+            const skirtGeo = new THREE.LatheGeometry(skirtPoints, 80);
+            const pos = skirtGeo.attributes.position;
+
+            for (let i = 0; i < pos.count; i++) {
+                const y = pos.getY(i);
+                const angle = Math.atan2(pos.getZ(i), pos.getX(i));
+                if (y < 0.4) {
+                    const foldIntensity = (0.4 - y) * 0.12;
+                    const wave = Math.sin(angle * 12) * foldIntensity;
+                    pos.setX(i, pos.getX(i) + Math.cos(angle) * wave);
+                    pos.setZ(i, pos.getZ(i) + Math.sin(angle) * wave);
+                }
+            }
+            skirtGeo.computeVertexNormals();
+            pos.needsUpdate = true;
+
+            const silkMat = new THREE.MeshPhysicalMaterial({
+                color: 0x0D0D12,
+                emissive: 0x040406,
+                roughness: 0.25,
+                metalness: 0.2,
+                clearcoat: 0.9,
+                clearcoatRoughness: 0.1,
+                reflectivity: 0.8,
+                side: THREE.DoubleSide
+            });
+
+            const gownMesh = new THREE.Mesh(skirtGeo, silkMat);
+            gownMesh.position.y = 0.1;
+            dressGroup.add(gownMesh);
+
+            const beltGeo = new THREE.TorusGeometry(0.38, 0.025, 20, 80);
+            const goldMat = new THREE.MeshStandardMaterial({
+                color: 0xD4AF37,
+                metalness: 0.95,
+                roughness: 0.15
+            });
+            const belt = new THREE.Mesh(beltGeo, goldMat);
+            belt.rotation.x = Math.PI / 2;
+            belt.position.y = 0.55;
+            dressGroup.add(belt);
+
+            const curve = new THREE.CatmullRomCurve3([
+                new THREE.Vector3(-0.4, 1.2, 0.2),
+                new THREE.Vector3(0.4, 0.8, -0.3),
+                new THREE.Vector3(0.5, 0.1, 0.4),
+                new THREE.Vector3(-0.6, -0.7, 0.6),
+                new THREE.Vector3(-0.8, -1.5, -0.2)
+            ]);
+            const sashGeo = new THREE.TubeGeometry(curve, 64, 0.05, 12, false);
+            const sashMat = new THREE.MeshStandardMaterial({
+                color: 0xD4AF37,
+                metalness: 0.8,
+                roughness: 0.2,
+                emissive: 0x221B05
+            });
+            const sash = new THREE.Mesh(sashGeo, sashMat);
+            dressGroup.add(sash);
+        }
+
+        function createAtmosphericParticles() {
+            const count = 220;
+            const geometry = new THREE.BufferGeometry();
+            const positions = new Float32Array(count * 3);
+
+            for (let i = 0; i < count * 3; i += 3) {
+                positions[i] = (Math.random() - 0.5) * 14;
+                positions[i + 1] = (Math.random() - 0.5) * 14;
+                positions[i + 2] = (Math.random() - 0.5) * 14;
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+            const material = new THREE.PointsMaterial({
+                color: 0xD4AF37,
+                size: 0.035,
+                transparent: true,
+                opacity: 0.4,
+                blending: THREE.AdditiveBlending
+            });
+
+            particleSystem = new THREE.Points(geometry, material);
+            scene.add(particleSystem);
+        }
+
+        function onWindowResize() {
+            if (!camera || !renderer) return;
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 0.4;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 0.4;
+        });
+
+        function animate(time) {
+            requestAnimationFrame(animate);
+
+            const t = time * 0.001;
+
+            if (dressGroup) {
+                dressGroup.position.y = Math.sin(t * 1.2) * 0.08;
+                dressGroup.rotation.y += (mouseX * 0.4 - dressGroup.rotation.y) * 0.03;
+                dressGroup.rotation.x += (mouseY * 0.2 - dressGroup.rotation.x) * 0.03;
+            }
+
+            if (particleSystem) {
+                particleSystem.rotation.y = t * 0.015;
+            }
+
+            if (renderer && scene && camera) {
+                renderer.render(scene, camera);
+            }
+        }
+
+        function setupVideoFallbacks() {
+            const targets = [
+                { videoId: 'hero-bg-video' },
+                { videoId: 'video-fabric' }
+            ];
+
+            targets.forEach(item => {
+                const video = document.getElementById(item.videoId);
+                if (!video) return;
+
+                video.addEventListener('error', () => {
+                    video.style.display = 'none';
+                });
+
+                const promise = video.play();
+                if (promise !== undefined) {
+                    promise.then(() => {
+                        video.classList.add('loaded');
+                    }).catch(() => {
+                        video.style.display = 'none';
+                    });
+                }
+            });
+        }
+
+        // ==========================================================================
+        // 2. SCROLL TIMELINE & SCROLL-CONTROLLED 3D VIDEO SCRUBBING ENGINE
+        // ==========================================================================
+        function initScrollStorytelling() {
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+            const progressBar = document.getElementById('scroll-progress');
+            const backToTopBtn = document.getElementById('back-to-top');
+            const navbar = document.querySelector('.navbar');
+
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (window.scrollY / totalHeight) * 100;
+                if (progressBar) progressBar.style.width = `${progress}%`;
+
+                if (navbar) {
+                    if (window.scrollY > 180) {
+                        navbar.classList.add('sticky');
+                    } else {
+                        navbar.classList.remove('sticky');
+                    }
+                }
+
+                if (backToTopBtn) {
+                    if (window.scrollY > 600) {
+                        backToTopBtn.classList.add('visible');
+                    } else {
+                        backToTopBtn.classList.remove('visible');
+                    }
+                }
+            });
+
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // DUAL-MODE CINEMAGRAPH & 3D RUNWAY STRIDE PHYSICS ENGINE FOR CHAPTER 07
+            const scrollVideo = document.getElementById('scroll-video');
+            const scrollWrapper3D = document.getElementById('scroll-wrapper-3d');
+            const hudDepthLabel = document.getElementById('hud-depth-label');
+            const scrollCaption = document.getElementById('scroll-video-caption');
+            const timelineFill = document.getElementById('runway-timeline-fill');
+            const timeCurLabel = document.getElementById('runway-time-cur');
+            const timeTotalLabel = document.getElementById('runway-time-total');
+
+            if (scrollVideo) {
+                let targetProgress = 0;
+                let currentProgress = 0;
+                let isScrubbing = false;
+                let lastScrollProgress = 0;
+                let scrollVelocity = 0;
+
+                function getDuration() {
+                    if (scrollVideo.duration && !isNaN(scrollVideo.duration) && scrollVideo.duration > 0) {
+                        return scrollVideo.duration;
+                    }
+                    return 10.0; // User 10s video fallback
+                }
+
+                // Dedicated 60FPS Continuous 3D Depth & Stride Kinematics Loop
+                function renderVideoFrame() {
+                    if (isScrubbing) {
+                        // Smooth Damped Momentum Lerp (0.09)
+                        currentProgress += (targetProgress - currentProgress) * 0.09;
+                        scrollVelocity = (currentProgress - lastScrollProgress) * 60;
+                        lastScrollProgress = currentProgress;
+
+                        const dur = getDuration();
+                        const targetTime = Math.min(Math.max(currentProgress * dur, 0), dur);
+
+                        // Sync Video Time Smoothly
+                        if (Math.abs(scrollVideo.currentTime - targetTime) > 0.03) {
+                            try {
+                                scrollVideo.currentTime = targetTime;
+                            } catch (e) { }
+                        }
+
+                        // 3D Runway Forward Stride Kinematics
+                        const depthScale = 1.0 + currentProgress * 0.32; // Dynamic Zoom
+                        const strideStep = currentProgress * 36;
+                        const swayX = Math.sin(strideStep) * 12; // Left-Right Runway Sway
+                        const bounceY = -Math.abs(Math.sin(strideStep)) * 8; // Step Bounce
+
+                        scrollVideo.style.transform = `scale(${depthScale}) translate3d(${swayX}px, ${bounceY}px, 0)`;
+                        scrollVideo.style.filter = `brightness(${0.90 + currentProgress * 0.22}) contrast(${1.14 + currentProgress * 0.08})`;
+
+                        // Update Live Telemetry HUDs
+                        if (hudDepthLabel) {
+                            hudDepthLabel.textContent = `DEPTH: +${(currentProgress * 4.8).toFixed(2)}M (${Math.round(currentProgress * 100)}%)`;
+                        }
+
+                        // Update Interactive Timeline Scrubber
+                        if (timelineFill) {
+                            timelineFill.style.width = `${Math.min(Math.max(currentProgress * 100, 0), 100)}%`;
+                        }
+                        if (timeCurLabel) {
+                            const curSec = (currentProgress * dur).toFixed(1);
+                            timeCurLabel.textContent = `00:${curSec < 10 ? '0' : ''}${curSec}s`;
+                        }
+                        if (timeTotalLabel) {
+                            timeTotalLabel.textContent = `00:${dur.toFixed(1)}s`;
+                        }
+
+                        // Dynamic caption fadeout as depth reaches deep immersion
+                        if (scrollCaption) {
+                            scrollCaption.style.opacity = currentProgress > 0.08 ? Math.max(1 - (currentProgress - 0.08) * 3, 0) : 1;
+                            scrollCaption.style.transform = `translateY(${currentProgress * -40}px) scale(${1 - currentProgress * 0.08})`;
+                        }
+                    }
+                    requestAnimationFrame(renderVideoFrame);
+                }
+                renderVideoFrame();
+
+                // Mouse 3D Stereoscopic Parallax on Runway
+                if (scrollWrapper3D) {
+                    document.addEventListener('mousemove', (e) => {
+                        if (!isScrubbing) return;
+                        const xRot = (e.clientY / window.innerHeight - 0.5) * -8;
+                        const yRot = (e.clientX / window.innerWidth - 0.5) * 10;
+                        scrollWrapper3D.style.transform = `perspective(1400px) rotateX(${xRot}deg) rotateY(${yRot}deg)`;
+                    });
+                }
+
+                ScrollTrigger.create({
+                    trigger: "#chapter-campaign",
+                    start: "top top",
+                    end: "+=3200",
+                    scrub: 0.5,
+                    pin: true,
+                    pinSpacing: true,
+                    onEnter: () => {
+                        isScrubbing = true;
+                        if (navbar) navbar.classList.add('nav-hidden');
+                        scrollVideo.play().catch(() => { });
+                    },
+                    onLeave: () => {
+                        isScrubbing = false;
+                        if (navbar) navbar.classList.remove('nav-hidden');
+                    },
+                    onEnterBack: () => {
+                        isScrubbing = true;
+                        if (navbar) navbar.classList.add('nav-hidden');
+                        scrollVideo.play().catch(() => { });
+                    },
+                    onLeaveBack: () => {
+                        isScrubbing = false;
+                        if (navbar) navbar.classList.remove('nav-hidden');
+                    },
+                    onUpdate: (self) => {
+                        isScrubbing = true;
+                        targetProgress = self.progress;
+                    }
+                });
+            }
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#chapter-silhouette",
+                    start: "top bottom",
+                    end: "top top",
+                    scrub: 1
+                }
+            })
+                .to(camera.position, { z: 5.2, y: 0.1 }, 0)
+                .to(dressGroup.rotation, { y: Math.PI * 0.75 }, 0)
+                .to(keyLight, { intensity: 2.2 }, 0);
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#chapter-fabric",
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+                .to(camera.position, { z: 3.0, y: -0.4, x: 1.0 }, 0)
+                .to(dressGroup.rotation, { y: Math.PI * 1.3 }, 0);
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#chapter-craft",
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+                .to(camera.position, { z: 2.4, y: 0.6, x: -0.6 }, 0)
+                .to(dressGroup.rotation, { y: Math.PI * 1.9 }, 0);
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#chapter-material",
+                    start: "top bottom",
+                    end: "center center",
+                    scrub: 1
+                }
+            })
+                .to(rimLight, { intensity: 5.0 }, 0)
+                .to(keyLight, { intensity: 0.4 }, 0)
+                .to(camera.position, { z: 5.5, y: 0, x: 0 }, 0);
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#chapter-movement",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 1.5
+                }
+            })
+                .to(dressGroup.rotation, { y: Math.PI * 4 }, 0);
+
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#chapter-final",
+                    start: "top center",
+                    end: "bottom bottom",
+                    scrub: 1
+                }
+            })
+                .to(camera.position, { z: 11 }, 0)
+                .to(dressGroup.scale, { x: 0.2, y: 0.2, z: 0.2 }, 0);
+        }
+
+        function initFullUserFlow() {
+            const modal = document.getElementById('inquiry-modal');
+            const modalClose = document.getElementById('modal-close');
+            const modalTitle = document.getElementById('modal-item-title');
+            const modalPrice = document.getElementById('modal-item-price');
+            const inquiryForm = document.getElementById('inquiry-form');
+            const successMsg = document.getElementById('modal-success-msg');
+
+            const openBtns = [
+                document.getElementById('nav-inquire-btn'),
+                document.getElementById('mobile-inquire-btn'),
+                document.getElementById('discover-dress-btn'),
+                document.getElementById('final-inquire-btn')
+            ];
+
+            openBtns.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        openModal("THE ECLIPSE DRESS", "₹ 185,000");
+                    });
+                }
+            });
+
+            const collectionItems = document.querySelectorAll('.collection-item');
+            collectionItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const title = item.getAttribute('data-title') || "HAUTE COUTURE PIECE";
+                    const price = item.getAttribute('data-price') || "INQUIRE FOR PRICE";
+                    openModal(title, price);
+                });
+            });
+
+            function openModal(title, price) {
+                if (modalTitle) modalTitle.textContent = title;
+                if (modalPrice) modalPrice.textContent = price;
+                if (inquiryForm) inquiryForm.style.display = 'block';
+                if (successMsg) successMsg.style.display = 'none';
+                if (modal) modal.classList.add('active');
+            }
+
+            if (modalClose) {
+                modalClose.addEventListener('click', () => {
+                    if (modal) modal.classList.remove('active');
+                });
+            }
+
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) modal.classList.remove('active');
+                });
+            }
+
+            const sizeBtns = document.querySelectorAll('.size-btn');
+            sizeBtns.forEach(sb => {
+                sb.addEventListener('click', () => {
+                    sizeBtns.forEach(b => b.classList.remove('selected'));
+                    sb.classList.add('selected');
+                });
+            });
+
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    inquiryForm.style.display = 'none';
+                    if (successMsg) successMsg.style.display = 'block';
+                });
+            }
+
+            const mobileBtn = document.getElementById('mobile-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileBtn && mobileNav) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('active');
+                    mobileBtn.textContent = mobileNav.classList.contains('active') ? 'CLOSE' : 'MENU';
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.remove('active');
+                        mobileBtn.textContent = 'MENU';
+                    });
+                });
+            }
+
+            const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            const cursorDot = document.getElementById('cursor-dot');
+            const cursorRing = document.getElementById('cursor-ring');
+
+            if (!isTouch && cursorDot && cursorRing) {
+                let mx = 0, my = 0;
+                let rx = 0, ry = 0;
+
+                document.addEventListener('mousemove', (e) => {
+                    mx = e.clientX;
+                    my = e.clientY;
+                    gsap.to(cursorDot, { x: mx, y: my, duration: 0.08 });
+                });
+
+                function renderCursor() {
+                    rx += (mx - rx) * 0.15;
+                    ry += (my - ry) * 0.15;
+                    cursorRing.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+                    requestAnimationFrame(renderCursor);
+                }
+                renderCursor();
+
+                const hoverTargets = document.querySelectorAll('.interactive-hover, .btn-luxury, .nav-links a');
+                hoverTargets.forEach(el => {
+                    el.addEventListener('mouseenter', () => cursorRing.classList.add('hovered'));
+                    el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
+                });
+
+                const magneticBtns = document.querySelectorAll('.magnetic-btn');
+                magneticBtns.forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        gsap.to(btn, { x: x * 0.25, y: y * 0.25, duration: 0.3, ease: "power2.out" });
+                    });
+                    btn.addEventListener('mouseleave', () => {
+                        gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
+                    });
+                });
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initThreeJS();
+            animate(0);
+            setupVideoFallbacks();
+            initScrollStorytelling();
+            initFullUserFlow();
+        });
+    </script>
+</body>
+
+</html>
