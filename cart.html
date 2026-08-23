@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag — FAUSAN Haute Couture</title>
+    <meta name="description" content="Review your curated haute couture garment acquisitions and proceed to bespoke atelier checkout.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Atmospheric Overlays -->
+    <div class="overlay-grain"></div>
+    <div class="overlay-vignette"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar sticky">
+        <a href="index.html" class="nav-logo magnetic-btn">FAUSAN</a>
+        <ul class="nav-links">
+            <li><a href="index.html#chapter-silhouette">SILHOUETTE</a></li>
+            <li><a href="index.html#chapter-fabric">FABRIC</a></li>
+            <li><a href="index.html#chapter-collection">COLLECTION</a></li>
+            <li><a href="index.html#chapter-product">ECLIPSE</a></li>
+        </ul>
+        <div style="display:flex; align-items:center; gap:18px;">
+            <a href="cart.html" class="nav-cart-btn" title="Shopping Bag" style="border-color:var(--accent-gold);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="cart-badge-count">0</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-toggle">MENU</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+        <a href="index.html#chapter-silhouette" class="mobile-link">SILHOUETTE</a>
+        <a href="index.html#chapter-fabric" class="mobile-link">FABRIC</a>
+        <a href="index.html#chapter-collection" class="mobile-link">COLLECTION</a>
+        <a href="index.html" class="mobile-link">HOME</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="ecom-page-wrapper">
+        <!-- Breadcrumb -->
+        <nav class="ecom-breadcrumb">
+            <a href="index.html">Atelier</a>
+            <span>/</span>
+            <span style="color:var(--accent-gold);">Your Shopping Bag</span>
+        </nav>
+
+        <h1 class="chapter-title" style="font-size:2.8rem; margin-bottom:40px;">YOUR SHOPPING BAG</h1>
+
+        <!-- Cart Layout Grid -->
+        <div class="cart-layout-grid">
+            <!-- Left: Items List -->
+            <div id="cart-items-container" class="cart-items-table">
+                <!-- Dynamically Rendered Cart Items -->
+            </div>
+
+            <!-- Right: Summary Box -->
+            <div class="order-summary-box" id="cart-summary-box">
+                <h3 class="summary-title">ACQUISITION SUMMARY</h3>
+
+                <div class="summary-line">
+                    <span>Atelier Subtotal</span>
+                    <span id="summary-subtotal">₹ 0</span>
+                </div>
+                <div class="summary-line">
+                    <span>White-Glove Insured Courier</span>
+                    <span style="color:var(--accent-gold);">COMPLIMENTARY</span>
+                </div>
+                <div class="summary-line">
+                    <span>Paris Atelier Certification</span>
+                    <span style="color:var(--accent-gold);">INCLUDED (ERC-721)</span>
+                </div>
+
+                <!-- VIP Promo Code -->
+                <div style="margin:25px 0 15px;">
+                    <div style="display:flex; gap:10px;">
+                        <input type="text" id="promo-input" class="modal-input" placeholder="VIP Collector Code..." style="margin-bottom:0; font-size:0.8rem;">
+                        <button type="button" id="btn-apply-promo" class="btn-luxury" style="padding:10px 18px; font-size:0.7rem;">APPLY</button>
+                    </div>
+                    <span id="promo-feedback" style="display:block; font-size:0.75rem; color:var(--accent-gold); margin-top:8px;"></span>
+                </div>
+
+                <div class="summary-line total">
+                    <span>Total Allocation</span>
+                    <span class="price" id="summary-total">₹ 0</span>
+                </div>
+
+                <a href="checkout.html" class="btn-add-bag" id="btn-checkout" style="display:block; text-align:center; text-decoration:none; margin-top:25px;">
+                    PROCEED TO SECURE CHECKOUT →
+                </a>
+
+                <a href="index.html#chapter-collection" style="display:block; text-align:center; color:var(--text-secondary); font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; margin-top:20px; text-decoration:none;">
+                    ← Continue Exploring Collection
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Web3 Footer -->
+    <footer class="footer-web3" style="margin-top:60px;">
+        <div class="footer-bottom">
+            <div>© 2026 FAUSAN DRESS HAUTE COUTURE. ALL RIGHTS RESERVED.</div>
+            <div style="display:flex; gap:25px;">
+                <a href="index.html" style="color:var(--text-secondary); text-decoration:none;">HOME</a>
+                <a href="checkout.html" style="color:var(--text-secondary); text-decoration:none;">CHECKOUT</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script>
+        let discountPercent = 0;
+
+        function renderCartPage() {
+            const cart = CartStore.getCart();
+            const container = document.getElementById('cart-items-container');
+            const summaryBox = document.getElementById('cart-summary-box');
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align:center; padding:80px 20px; background:rgba(18,18,22,0.6); border:1px solid var(--border-gold); border-radius:4px;">
+                        <h3 style="font-family:var(--font-title); font-size:1.8rem; margin-bottom:15px;">YOUR BAG IS CURRENTLY EMPTY</h3>
+                        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:30px;">Discover the 2026 Haute Couture collection and reserve your bespoke pieces.</p>
+                        <a href="index.html#chapter-collection" class="btn-luxury magnetic-btn" style="text-decoration:none;">DISCOVER THE COLLECTION</a>
+                    </div>
+                `;
+                if (summaryBox) summaryBox.style.display = 'none';
+                return;
+            }
+
+            if (summaryBox) summaryBox.style.display = 'block';
+            container.innerHTML = '';
+
+            cart.forEach((item, index) => {
+                const row = document.createElement('div');
+                row.className = 'cart-row-item';
+                row.innerHTML = `
+                    <img class="cart-row-img" src="${item.image}" alt="${item.name}">
+                    <div class="cart-row-info">
+                        <h4>${item.name}</h4>
+                        <span class="cart-row-badge">SIZE: ${item.size} • COLOR: ${item.color}</span>
+                        <div class="cart-row-price">${CartStore.formatCurrency(item.price * item.quantity)}</div>
+                        <button class="cart-remove-btn" onclick="CartStore.removeItem(${index}); renderCartPage();">Remove Garment</button>
+                    </div>
+                    <div class="qty-pill">
+                        <button class="qty-btn" onclick="CartStore.updateQuantity(${index}, ${item.quantity - 1}); renderCartPage();">−</button>
+                        <span class="qty-num">${item.quantity}</span>
+                        <button class="qty-btn" onclick="CartStore.updateQuantity(${index}, ${item.quantity + 1}); renderCartPage();">+</button>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+
+            // Update Summary
+            const subtotal = CartStore.getSubtotal();
+            const discount = subtotal * discountPercent;
+            const total = subtotal - discount;
+
+            document.getElementById('summary-subtotal').textContent = CartStore.formatCurrency(subtotal);
+            document.getElementById('summary-total').textContent = CartStore.formatCurrency(total);
+        }
+
+        // Apply Promo
+        document.getElementById('btn-apply-promo').addEventListener('click', () => {
+            const input = document.getElementById('promo-input').value.trim().toUpperCase();
+            const feedback = document.getElementById('promo-feedback');
+            if (input === 'VIP2026' || input === 'COUTURE') {
+                discountPercent = 0.10;
+                feedback.textContent = '✨ VIP Collector Privilege Applied: 10% Courtesy Privilege';
+                CartStore.showToast('VIP Privilege Applied: 10% Courtesy Allocation');
+                renderCartPage();
+            } else if (input === '') {
+                feedback.textContent = 'Please enter a code.';
+            } else {
+                feedback.textContent = 'Invalid or expired collector code.';
+            }
+        });
+
+        // Initialize
+        renderCartPage();
+
+        // Mobile Menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        if (mobileToggle && mobileNav) {
+            mobileToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('active');
+                mobileToggle.textContent = mobileNav.classList.contains('active') ? 'CLOSE' : 'MENU';
+            });
+        }
+    </script>
+</body>
+
+</html>

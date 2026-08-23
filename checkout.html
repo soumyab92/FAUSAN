@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout — FAUSAN Haute Couture</title>
+    <meta name="description" content="Secure acquisition and private salon delivery confirmation for FAUSAN bespoke couture pieces.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Atmospheric Overlays -->
+    <div class="overlay-grain"></div>
+    <div class="overlay-vignette"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar sticky">
+        <a href="index.html" class="nav-logo magnetic-btn">FAUSAN</a>
+        <div style="font-size:0.75rem; letter-spacing:3px; color:var(--accent-gold); text-transform:uppercase;">
+            SECURE ATELIER CHECKOUT
+        </div>
+        <a href="cart.html" style="color:var(--text-secondary); text-decoration:none; font-size:0.75rem; letter-spacing:2px;">
+            ← RETURN TO BAG
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="ecom-page-wrapper">
+        <nav class="ecom-breadcrumb">
+            <a href="index.html">Atelier</a>
+            <span>/</span>
+            <a href="cart.html">Shopping Bag</a>
+            <span>/</span>
+            <span style="color:var(--accent-gold);">Checkout</span>
+        </nav>
+
+        <h1 class="chapter-title" style="font-size:2.6rem; margin-bottom:35px;">BESPOKE COUTURE COMMISSION</h1>
+
+        <form id="checkout-form">
+            <div class="checkout-grid">
+                <!-- Left: Checkout Forms -->
+                <div>
+                    <!-- Step 1: VIP Client Contact -->
+                    <div class="checkout-step-section">
+                        <h3 class="checkout-step-title">
+                            <span class="step-badge-num">1</span>
+                            VIP CLIENT DOSSIER
+                        </h3>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                            <input type="text" id="chk-fname" class="modal-input" placeholder="First Name" required>
+                            <input type="text" id="chk-lname" class="modal-input" placeholder="Last Name" required>
+                        </div>
+                        <input type="email" id="chk-email" class="modal-input" placeholder="Client Email Address" required>
+                        <input type="tel" id="chk-phone" class="modal-input" placeholder="Direct Concierge Contact Number" required>
+                    </div>
+
+                    <!-- Step 2: Delivery / Private Salon -->
+                    <div class="checkout-step-section">
+                        <h3 class="checkout-step-title">
+                            <span class="step-badge-num">2</span>
+                            DELIVERY METHOD & FITTING SALON
+                        </h3>
+                        <div class="salon-grid" style="margin-bottom:20px;">
+                            <div class="salon-card selected" data-shipping="White-Glove Insured Residence Courier">
+                                <h4 class="salon-name">RESIDENCE COURIER</h4>
+                                <p class="salon-desc">Insured climate-controlled cedar casket courier delivered directly to your private residence.</p>
+                            </div>
+                            <div class="salon-card" data-shipping="Place Vendôme Paris Atelier Salon Pickup">
+                                <h4 class="salon-name">PARIS SALON FITTING</h4>
+                                <p class="salon-desc">Private appointment and bespoke fitting suite at Place Vendôme, Paris 1er.</p>
+                            </div>
+                        </div>
+
+                        <input type="text" id="chk-address" class="modal-input" placeholder="Delivery Street Address / Residence Name" required>
+                        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:15px;">
+                            <input type="text" id="chk-city" class="modal-input" placeholder="City" required>
+                            <input type="text" id="chk-state" class="modal-input" placeholder="State / Region" required>
+                            <input type="text" id="chk-zip" class="modal-input" placeholder="Postal Code" required>
+                        </div>
+                        <input type="text" id="chk-country" class="modal-input" placeholder="Country" value="France" required>
+                    </div>
+
+                    <!-- Step 3: Payment Options -->
+                    <div class="checkout-step-section">
+                        <h3 class="checkout-step-title">
+                            <span class="step-badge-num">3</span>
+                            PAYMENT & SETTLEMENT
+                        </h3>
+                        <div class="payment-method-selector">
+                            <div class="payment-method-card selected" data-method="Direct Atelier Card">
+                                <h4 style="font-size:0.95rem; margin-bottom:5px; color:var(--text-primary);">CREDIT / BLACK CARD</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary);">Visa Infinite, Amex Centurion, Mastercard World Elite</p>
+                            </div>
+                            <div class="payment-method-card" data-method="Atelier Concierge Bank Wire">
+                                <h4 style="font-size:0.95rem; margin-bottom:5px; color:var(--text-primary);">PRIVATE BANK WIRE</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary);">Direct Atelier Treasury transfer with bespoke invoice</p>
+                            </div>
+                        </div>
+
+                        <div id="card-fields">
+                            <input type="text" class="modal-input" placeholder="Card Number (4000 1234 5678 9010)" maxlength="19">
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                                <input type="text" class="modal-input" placeholder="MM / YY" maxlength="5">
+                                <input type="password" class="modal-input" placeholder="CVC" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Summary Sidebar -->
+                <div class="order-summary-box">
+                    <h3 class="summary-title">ORDER REVIEW</h3>
+
+                    <div id="checkout-items-list" style="display:flex; flex-direction:column; gap:15px; margin-bottom:25px; max-height:240px; overflow-y:auto;">
+                        <!-- Dynamically Populated Items -->
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span id="chk-subtotal">₹ 0</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Courier Delivery</span>
+                        <span style="color:var(--accent-gold);">COMPLIMENTARY</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Taxes & Atelier Duties</span>
+                        <span>₹ 0 (INCLUDED)</span>
+                    </div>
+
+                    <div class="summary-line total">
+                        <span>Total Allocation</span>
+                        <span class="price" id="chk-total">₹ 0</span>
+                    </div>
+
+                    <button type="submit" class="btn-add-bag" style="width:100%; margin-top:25px;">
+                        CONFIRM & ALLOCATE BESPOKE ORDER
+                    </button>
+
+                    <p style="font-size:0.72rem; color:var(--text-secondary); text-align:center; margin-top:15px; line-height:1.5;">
+                        🔒 256-Bit Encrypted Atelier Transaction • Guaranteed Authenticity Certificate
+                    </p>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script>
+        const cart = CartStore.getCart();
+
+        // Redirect to bag if empty
+        if (cart.length === 0) {
+            window.location.href = 'cart.html';
+        }
+
+        // Render Checkout Summary
+        const itemsList = document.getElementById('checkout-items-list');
+        itemsList.innerHTML = '';
+        cart.forEach(item => {
+            const div = document.createElement('div');
+            div.style.display = 'flex';
+            div.style.justifyContent = 'space-between';
+            div.style.alignItems = 'center';
+            div.style.fontSize = '0.82rem';
+            div.innerHTML = `
+                <div>
+                    <strong>${item.name}</strong> × ${item.quantity}
+                    <div style="font-size:0.72rem; color:var(--text-secondary);">${item.size} • ${item.color}</div>
+                </div>
+                <div style="color:var(--accent-gold);">${CartStore.formatCurrency(item.price * item.quantity)}</div>
+            `;
+            itemsList.appendChild(div);
+        });
+
+        const subtotal = CartStore.getSubtotal();
+        document.getElementById('chk-subtotal').textContent = CartStore.formatCurrency(subtotal);
+        document.getElementById('chk-total').textContent = CartStore.formatCurrency(subtotal);
+
+        // Salon selection
+        let selectedShipping = 'White-Glove Insured Residence Courier';
+        document.querySelectorAll('.salon-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.salon-card').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                selectedShipping = card.getAttribute('data-shipping');
+            });
+        });
+
+        // Payment method selection
+        document.querySelectorAll('.payment-method-card').forEach(p => {
+            p.addEventListener('click', () => {
+                document.querySelectorAll('.payment-method-card').forEach(c => c.classList.remove('selected'));
+                p.classList.add('selected');
+            });
+        });
+
+        // Form Submit -> Store order and go to thank-you.html
+        document.getElementById('checkout-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const orderNum = Math.floor(1000 + Math.random() * 9000);
+            const orderId = `#FAUSAN-2026-${orderNum}`;
+            const clientName = `${document.getElementById('chk-fname').value} ${document.getElementById('chk-lname').value}`;
+            const email = document.getElementById('chk-email').value;
+
+            const orderData = {
+                orderId: orderId,
+                clientName: clientName,
+                email: email,
+                shipping: selectedShipping,
+                items: cart,
+                total: subtotal,
+                formattedTotal: CartStore.formatCurrency(subtotal),
+                date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+            };
+
+            localStorage.setItem('fausan_last_order', JSON.stringify(orderData));
+            CartStore.clearCart();
+
+            // Redirect to Thank You Page
+            window.location.href = 'thank-you.html';
+        });
+    </script>
+</body>
+
+</html>

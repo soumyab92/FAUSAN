@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details — FAUSAN Haute Couture</title>
+    <meta name="description" content="Explore bespoke atelier specifications, physical silk compositions, and private fitting reservations.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Top Reading Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Atmospheric Overlays -->
+    <div class="overlay-grain"></div>
+    <div class="overlay-vignette"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar sticky">
+        <a href="index.html" class="nav-logo magnetic-btn">FAUSAN</a>
+        <ul class="nav-links">
+            <li><a href="index.html#chapter-silhouette">SILHOUETTE</a></li>
+            <li><a href="index.html#chapter-fabric">FABRIC</a></li>
+            <li><a href="index.html#chapter-collection">COLLECTION</a></li>
+            <li><a href="index.html#chapter-product">ECLIPSE</a></li>
+        </ul>
+        <div style="display:flex; align-items:center; gap:18px;">
+            <a href="cart.html" class="nav-cart-btn" title="Shopping Bag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="cart-badge-count">0</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-toggle">MENU</button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+        <a href="index.html#chapter-silhouette" class="mobile-link">SILHOUETTE</a>
+        <a href="index.html#chapter-fabric" class="mobile-link">FABRIC</a>
+        <a href="index.html#chapter-collection" class="mobile-link">COLLECTION</a>
+        <a href="cart.html" class="mobile-link">SHOPPING BAG</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="ecom-page-wrapper">
+        <!-- Breadcrumb -->
+        <nav class="ecom-breadcrumb">
+            <a href="index.html">Atelier</a>
+            <span>/</span>
+            <a href="index.html#chapter-collection">Collection 2026</a>
+            <span>/</span>
+            <span id="breadcrumb-current" style="color:var(--accent-gold);">THE ECLIPSE GOWN</span>
+        </nav>
+
+        <!-- Product Details Grid -->
+        <div class="product-detail-grid">
+            <!-- Left: Gallery Column -->
+            <div class="product-gallery-stage">
+                <div class="product-hero-image-wrap">
+                    <img id="main-product-img" class="product-hero-image" src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1200&q=80" alt="FAUSAN Haute Couture Gown">
+                </div>
+                <div class="product-thumb-row" id="thumb-container">
+                    <!-- Dynamic Thumbnails -->
+                </div>
+            </div>
+
+            <!-- Right: Details Column -->
+            <div class="product-info-column">
+                <span class="product-edition-badge" id="p-edition-badge">BESPOKE ATELIER COMMISSION</span>
+                <h1 class="product-main-title" id="p-title">THE ECLIPSE GOWN</h1>
+                <p class="product-main-price" id="p-price">₹ 185,000</p>
+                <p class="product-summary-desc" id="p-desc">
+                    An architectural evening gown sculpted from heavy 42-momme Lyon silk crepe. Featuring concealed internal corsetry, bias-cut cascading godets, and hand-finished 24-karat spun gold filament tracing the collarbone and trailing hemline.
+                </p>
+
+                <!-- Color Selection -->
+                <div class="option-group-label">
+                    <span>Atelier Colorway:</span>
+                    <span id="selected-color-label" style="color:var(--text-primary);">Obsidian Midnight</span>
+                </div>
+                <div class="color-swatch-list">
+                    <div class="color-swatch-item selected" data-color="Obsidian Midnight">
+                        <span class="color-dot" style="background:#0D0D12; border:1px solid #444;"></span>
+                        <span>Obsidian</span>
+                    </div>
+                    <div class="color-swatch-item" data-color="24K Imperial Gold">
+                        <span class="color-dot" style="background:linear-gradient(135deg, #F3E5AB, #D4AF37);"></span>
+                        <span>24K Gold</span>
+                    </div>
+                    <div class="color-swatch-item" data-color="Pure Mulberry Silk Cream">
+                        <span class="color-dot" style="background:#F4F1EA;"></span>
+                        <span>Silk Cream</span>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="option-group-label">
+                    <span>Select Sizing:</span>
+                    <a href="index.html#chapter-product" id="size-guide-link" style="color:var(--accent-gold); text-decoration:none; font-size:0.75rem;">Made-to-Measure Protocol</a>
+                </div>
+                <div class="size-pill-list">
+                    <button type="button" class="size-pill" data-size="EU 34 (US 2)">EU 34</button>
+                    <button type="button" class="size-pill selected" data-size="EU 36 (US 4)">EU 36</button>
+                    <button type="button" class="size-pill" data-size="EU 38 (US 6)">EU 38</button>
+                    <button type="button" class="size-pill" data-size="EU 40 (US 8)">EU 40</button>
+                    <button type="button" class="size-pill" data-size="Bespoke Custom Fit">Bespoke Fit</button>
+                </div>
+
+                <!-- Action CTAs -->
+                <div class="cta-button-row">
+                    <button class="btn-add-bag" id="btn-add-to-cart">COMMISSION PIECE (ADD TO BAG)</button>
+                    <a href="cart.html" class="btn-inquire-direct" id="btn-direct-buy" style="display:flex; align-items:center; justify-content:center; text-decoration:none;">VIEW BAG & CHECKOUT</a>
+                </div>
+
+                <!-- Accordion Information -->
+                <div class="accordion-wrapper">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Atelier Specifications</span>
+                            <span>+</span>
+                        </button>
+                        <div class="accordion-body open">
+                            <p id="accordion-specs">
+                                • <strong>Fabric</strong>: 100% Organic Lyon Mulberry Silk Crepe (42 Momme)<br>
+                                • <strong>Craftsmanship</strong>: 180 Hours of hand draping, French seams, and boning<br>
+                                • <strong>Origin</strong>: Maison FAUSAN Atelier, Place Vendôme, Paris<br>
+                                • <strong>Authenticity</strong>: Numbered Atelier Archive Certificate & Sealed Dossier
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>White-Glove Insured Delivery & Fittings</span>
+                            <span>+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Delivered in a handcrafted climate-controlled cedar casket with direct insured courier delivery worldwide. Private salon fittings available at our Place Vendôme (Paris) and Madison Avenue (New York) salons.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Archival Care & Preservation</span>
+                            <span>+</span>
+                        </button>
+                        <div class="accordion-body">
+                            <p>Specialist haute couture dry clean only. Store in the provided bespoke archival garment shroud away from direct UV exposure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Luxury Footer -->
+    <footer class="footer-web3" style="margin-top:60px;">
+        <div class="footer-bottom">
+            <div>© 2026 MAISON FAUSAN PARIS. ALL RIGHTS RESERVED.</div>
+            <div style="display:flex; gap:25px;">
+                <a href="index.html" style="color:var(--text-secondary); text-decoration:none;">ATELIER HOME</a>
+                <a href="cart.html" style="color:var(--text-secondary); text-decoration:none;">SHOPPING BAG</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script>
+        // Load Product dynamically from URL query params (e.g. ?id=solar)
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id') || 'eclipse';
+        const currentProduct = FAUSAN_CATALOG[productId] || FAUSAN_CATALOG['eclipse'];
+
+        // Populate page elements
+        document.getElementById('breadcrumb-current').textContent = currentProduct.name;
+        document.getElementById('p-edition-badge').textContent = currentProduct.subtitle;
+        document.getElementById('p-title').textContent = currentProduct.name;
+        document.getElementById('p-price').textContent = currentProduct.formattedPrice;
+        document.getElementById('p-desc').textContent = currentProduct.description;
+        document.getElementById('main-product-img').src = currentProduct.images[0];
+
+        document.getElementById('accordion-specs').innerHTML = `
+            • <strong>Fabric</strong>: ${currentProduct.material}<br>
+            • <strong>Craftsmanship</strong>: ${currentProduct.atelier}<br>
+            • <strong>Edition</strong>: ${currentProduct.edition}<br>
+            • <strong>Authenticity</strong>: Numbered Atelier Archive Certificate & Sealed Dossier
+        `;
+
+        // Render Thumbnails
+        const thumbContainer = document.getElementById('thumb-container');
+        thumbContainer.innerHTML = '';
+        currentProduct.images.forEach((imgSrc, idx) => {
+            const thumb = document.createElement('div');
+            thumb.className = `product-thumb ${idx === 0 ? 'active' : ''}`;
+            thumb.innerHTML = `<img src="${imgSrc}" alt="${currentProduct.name}">`;
+            thumb.addEventListener('click', () => {
+                document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+                document.getElementById('main-product-img').src = imgSrc;
+            });
+            thumbContainer.appendChild(thumb);
+        });
+
+        // Size & Color selection state
+        let selectedSize = 'EU 36';
+        let selectedColor = 'Obsidian Midnight';
+
+        document.querySelectorAll('.size-pill').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.size-pill').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                selectedSize = btn.getAttribute('data-size');
+            });
+        });
+
+        document.querySelectorAll('.color-swatch-item').forEach(sw => {
+            sw.addEventListener('click', () => {
+                document.querySelectorAll('.color-swatch-item').forEach(s => s.classList.remove('selected'));
+                sw.classList.add('selected');
+                selectedColor = sw.getAttribute('data-color');
+                document.getElementById('selected-color-label').textContent = selectedColor;
+            });
+        });
+
+        // Add to Cart
+        document.getElementById('btn-add-to-cart').addEventListener('click', () => {
+            CartStore.addItem(currentProduct, selectedSize, selectedColor, 1);
+        });
+
+        // Buy Now Button
+        document.getElementById('btn-direct-buy').addEventListener('click', (e) => {
+            CartStore.addItem(currentProduct, selectedSize, selectedColor, 1);
+        });
+
+        // Accordion toggle
+        document.querySelectorAll('.accordion-header').forEach(hdr => {
+            hdr.addEventListener('click', () => {
+                const body = hdr.nextElementSibling;
+                body.classList.toggle('open');
+                hdr.querySelector('span:last-child').textContent = body.classList.contains('open') ? '−' : '+';
+            });
+        });
+
+        // Mobile Menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        if (mobileToggle && mobileNav) {
+            mobileToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('active');
+                mobileToggle.textContent = mobileNav.classList.contains('active') ? 'CLOSE' : 'MENU';
+            });
+        }
+    </script>
+</body>
+
+</html>

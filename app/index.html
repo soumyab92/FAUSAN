@@ -72,7 +72,17 @@
             <li><a href="#chapter-product" class="magnetic-btn">ECLIPSE</a></li>
             <li><a href="#contact" class="magnetic-btn" id="nav-inquire-btn">INQUIRE</a></li>
         </ul>
-        <button class="mobile-menu-btn" id="mobile-toggle">MENU</button>
+        <div style="display:flex; align-items:center; gap:16px;">
+            <a href="cart.html" class="nav-cart-btn" title="Shopping Bag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="cart-badge-count">0</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-toggle">MENU</button>
+        </div>
     </header>
 
     <!-- Mobile Navigation Overlay -->
@@ -81,6 +91,7 @@
         <a href="#chapter-fabric" class="mobile-link">FABRIC</a>
         <a href="#chapter-collection" class="mobile-link">COLLECTION</a>
         <a href="#chapter-product" class="mobile-link">ECLIPSE</a>
+        <a href="cart.html" class="mobile-link">SHOPPING BAG</a>
         <a href="#contact" class="mobile-link" id="mobile-inquire-btn">INQUIRE</a>
     </div>
 
@@ -99,14 +110,14 @@
             </div>
 
             <div class="hero-glass-box">
-                <span class="hero-badge">HAUTE COUTURE 2026</span>
+                <span class="hero-badge">PARIS • PLACE VENDÔME</span>
                 <h1 class="hero-title">FAUSAN</h1>
-                <p class="hero-tagline">THE ART OF MOVEMENT</p>
-                <a href="#chapter-silhouette" class="btn-luxury magnetic-btn">EXPLORE COLLECTION</a>
+                <p class="hero-tagline">THE ART OF HAUTE COUTURE MOVEMENT</p>
+                <a href="#chapter-silhouette" class="btn-luxury magnetic-btn">DISCOVER THE ATELIER</a>
             </div>
 
             <div class="scroll-indicator">
-                <span>SCROLL TO DISCOVER</span>
+                <span>SCROLL TO EXPLORE</span>
                 <div class="scroll-line"></div>
             </div>
         </section>
@@ -114,18 +125,17 @@
         <!-- CHAPTER 02: SILHOUETTE -->
         <section class="chapter" id="chapter-silhouette">
             <div class="chapter-content">
-                <span class="chapter-label">CHAPTER 01</span>
-                <h2 class="chapter-title">SILHOUETTE</h2>
-                <p class="chapter-subtitle">"Designed around the fluid geometry of physical movement."</p>
+                <span class="chapter-label">CHAPTER I — FORM & ARCHITECTURE</span>
+                <h2 class="chapter-title">SCULPTURAL SILHOUETTE</h2>
+                <p class="chapter-subtitle">"Architectural corsetry engineered to flow seamlessly into weightless silk volume."</p>
 
                 <div class="model-runner-card">
                     <img class="model-runner-img"
                         src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1600&q=80"
-                        alt="MODEL IN HAUTE COUTURE DRESS">
+                        alt="FAUSAN HAUTE COUTURE SILHOUETTE">
                     <div class="model-runner-caption">
-                        <span class="chapter-label" style="margin-bottom:6px;">DYNAMIC FORM</span>
-                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Where
-                            structural boning transitions into effortless cadence.</p>
+                        <span class="chapter-label" style="margin-bottom:6px;">DYNAMIC PROPORTION</span>
+                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Where structural internal boning transitions into fluid, effortless cadence.</p>
                     </div>
                 </div>
             </div>
@@ -134,14 +144,14 @@
         <!-- CHAPTER 03: FABRIC -->
         <section class="chapter" id="chapter-fabric">
             <div class="chapter-content">
-                <span class="chapter-label">CHAPTER 02</span>
-                <h2 class="chapter-title">FABRIC</h2>
-                <p class="chapter-subtitle">"Where organic texture becomes an expressive identity."</p>
+                <span class="chapter-label">CHAPTER II — MATIÈRE</span>
+                <h2 class="chapter-title">42-MOMME MULBERRY SILK</h2>
+                <p class="chapter-subtitle">"Woven in historic Lyon mills with double-crepe drape and deep obsidian matte depth."</p>
 
                 <div class="video-narrative-container">
                     <img class="video-fallback-img"
                         src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=80"
-                        alt="HAUTE COUTURE SILK FABRIC">
+                        alt="HAUTE COUTURE SILK MATIERE">
                     <video class="video-narrative-element" id="video-fabric" src="assets/videos/runway-model.mp4" autoplay muted defaultMuted playsinline webkit-playsinline x5-playsinline preload="auto" poster="assets/images/og-image.jpg">
                         <source src="assets/videos/runway-model.mp4" type="video/mp4">
                         <source src="assets/videos/hero-runway.mp4" type="video/mp4">
@@ -149,9 +159,8 @@
                         <source src="assets/videos/Full_body_front_facing_camera.mp4" type="video/mp4">
                     </video>
                     <div class="video-overlay-caption">
-                        <span class="chapter-label" style="margin-bottom:6px;">TACTILE COUTURE</span>
-                        <p style="font-size:0.85rem; letter-spacing:1px; color:#D5D4D0;">Silk crepe de chine woven with
-                            micro-sculptural memory tension.</p>
+                        <span class="chapter-label" style="margin-bottom:6px;">TACTILE SAVOIR-FAIRE</span>
+                        <p style="font-size:0.85rem; letter-spacing:1px; color:#D5D4D0;">Pure silk crepe de chine woven with natural micro-elasticity for unbroken contours.</p>
                     </div>
                 </div>
             </div>
@@ -160,10 +169,9 @@
         <!-- CHAPTER 04: CRAFT -->
         <section class="chapter" id="chapter-craft">
             <div class="chapter-content">
-                <span class="chapter-label">CHAPTER 03</span>
-                <h2 class="chapter-title">CRAFT</h2>
-                <p class="chapter-subtitle">"Every seam holds intention. 180 hours of hand-sculpted atelier
-                    craftsmanship."</p>
+                <span class="chapter-label">CHAPTER III — SAVOIR-FAIRE</span>
+                <h2 class="chapter-title">PARISIAN HAND CRAFTSMANSHIP</h2>
+                <p class="chapter-subtitle">"Every seam holds intention. 180 hours of meticulous hand-sculpted tailoring by master artisans."</p>
 
                 <div class="model-runner-card">
                     <img class="model-runner-img"
@@ -171,23 +179,22 @@
                         alt="ATELIER CRAFTSMANSHIP DETAILS">
                     <div class="model-runner-caption">
                         <span class="chapter-label" style="margin-bottom:6px;">HAND EMBROIDERY</span>
-                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Intricate gold
-                            metallic threading sewn frame by frame by Parisian master artisans.</p>
+                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">24-karat spun gold filament hand-stitched along structural contours by Parisian couturiers.</p>
                     </div>
                 </div>
 
                 <div class="atelier-stats-grid">
                     <div class="stat-card">
                         <div class="stat-val">180 HRS</div>
-                        <div class="stat-label">Hand Stitching</div>
+                        <div class="stat-label">Hand Draping</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-val">100%</div>
-                        <div class="stat-label">Mulberry Silk</div>
+                        <div class="stat-label">Lyon Mulberry Silk</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-val">PARIS</div>
-                        <div class="stat-label">Atelier Origin</div>
+                        <div class="stat-label">Place Vendôme Atelier</div>
                     </div>
                 </div>
             </div>
@@ -196,9 +203,9 @@
         <!-- CHAPTER 05: MATERIAL -->
         <section class="chapter" id="chapter-material">
             <div class="chapter-content">
-                <span class="chapter-label">CHAPTER 04</span>
-                <h2 class="chapter-title">MATERIAL</h2>
-                <p class="chapter-subtitle">"Designed to interact with light, shadow, and touch."</p>
+                <span class="chapter-label">CHAPTER IV — LUMINESCENCE</span>
+                <h2 class="chapter-title">GOLDEN CHIAROSCURO</h2>
+                <p class="chapter-subtitle">"Designed to interact poetically with ambient light, shadow, and movement."</p>
 
                 <div class="model-runner-card">
                     <img class="model-runner-img"
@@ -206,8 +213,7 @@
                         alt="LUXURY MATERIAL DRAPE">
                     <div class="model-runner-caption">
                         <span class="chapter-label" style="margin-bottom:6px;">LIGHT REFLECTION</span>
-                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Specially
-                            treated silk fibers engineered for high volumetric rim light responsiveness.</p>
+                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Specially treated silk fibers engineered for high volumetric rim light responsiveness.</p>
                     </div>
                 </div>
             </div>
@@ -216,9 +222,9 @@
         <!-- CHAPTER 06: MOVEMENT -->
         <section class="chapter" id="chapter-movement">
             <div class="chapter-content">
-                <span class="chapter-label">CHAPTER 05</span>
-                <h2 class="chapter-title">MOVEMENT</h2>
-                <p class="chapter-subtitle">"Made to move seamlessly with your natural cadence."</p>
+                <span class="chapter-label">CHAPTER V — KINEMATICS</span>
+                <h2 class="chapter-title">MOVEMENT IN SILENCE</h2>
+                <p class="chapter-subtitle">"Bias-cut geometry tailored to flow in effortless harmony with the cadence of the body."</p>
 
                 <div class="model-runner-card">
                     <img class="model-runner-img"
@@ -226,8 +232,7 @@
                         alt="FAUSAN COUTURE MODEL MOVEMENT">
                     <div class="model-runner-caption">
                         <span class="chapter-label" style="margin-bottom:6px;">SILK IN FLIGHT</span>
-                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Unrestricted
-                            silhouette crafted for weightless rotation.</p>
+                        <p style="font-size:0.88rem; letter-spacing:1px; color:#E0DFDA; line-height:1.4;">Unrestricted silhouette crafted for weightless rotational grace.</p>
                     </div>
                 </div>
             </div>
@@ -245,9 +250,9 @@
                 <!-- Sleek Telemetry HUDs -->
                 <div class="telemetry-hud hud-tl">
                     <span class="telemetry-dot-pulse"></span>
-                    <span>RUNWAY 3D ENGINE • V2.6</span>
+                    <span>PARIS ATELIER • DÉFILÉ 2026</span>
                 </div>
-                <div class="telemetry-hud hud-tr">CHAPTER 06 // MOTION</div>
+                <div class="telemetry-hud hud-tr">CHAPTER VI // THE RUNWAY</div>
                 <div class="telemetry-hud hud-bl" id="hud-depth-label">DEPTH: +0.00M (0%)</div>
 
                 <!-- Interactive Runway Timeline Scrubber (Bottom Center) -->
@@ -267,12 +272,10 @@
                 </video>
 
                 <div class="scroll-video-caption" id="scroll-video-caption">
-                    <span class="scroll-badge">3D SCROLL-CONTROLLED RUNNER</span>
-                    <h2 class="chapter-title" style="font-size:clamp(2.5rem, 5vw, 4.5rem); margin-bottom:15px;">FAUSAN
-                        IN MOTION</h2>
-                    <p
-                        style="font-size:0.88rem; letter-spacing:2px; color:var(--text-secondary); text-transform:uppercase;">
-                        SCROLL UP & DOWN TO CONTROL 3D MODEL RUNNER
+                    <span class="scroll-badge">HAUTE COUTURE DÉFILÉ</span>
+                    <h2 class="chapter-title" style="font-size:clamp(2.5rem, 5vw, 4.5rem); margin-bottom:15px;">FAUSAN IN MOTION</h2>
+                    <p style="font-size:0.88rem; letter-spacing:2px; color:var(--text-secondary); text-transform:uppercase;">
+                        SCROLL TO EXPLORE THE RUNWAY PRESENTATION
                     </p>
                 </div>
             </div>
@@ -281,51 +284,75 @@
         <!-- CHAPTER 08: COLLECTION -->
         <section class="chapter" id="chapter-collection">
             <div class="chapter-content" style="max-width:1200px;">
-                <span class="chapter-label">CURATED PIECES</span>
-                <h2 class="chapter-title">THE COLLECTION</h2>
+                <span class="chapter-label">CHAPTER VII — CURATED EDITIONS</span>
+                <h2 class="chapter-title">THE 2026 COLLECTION</h2>
 
                 <div class="editorial-grid">
-                    <div class="grid-item grid-item-1 interactive-hover collection-item" data-title="THE ECLIPSE DRESS"
-                        data-price="₹ 185,000">
+                    <div class="grid-item grid-item-1 interactive-hover collection-item" data-id="eclipse" data-title="THE ECLIPSE GOWN" data-price="₹ 185,000">
+                        <span class="grid-item-badge">NO. 01</span>
                         <div class="grid-item-visual"
                             style="background-image: url('https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80');">
                         </div>
                         <div class="grid-item-info">
-                            <span class="grid-item-num">NO. 01</span>
-                            <h3 class="grid-item-name">THE ECLIPSE DRESS</h3>
+                            <div class="grid-item-text-group">
+                                <h3 class="grid-item-name">THE ECLIPSE GOWN</h3>
+                                <span class="grid-item-price-tag">₹ 185,000</span>
+                            </div>
+                            <a href="product-details.html?id=eclipse" class="grid-item-cta-btn">
+                                <span>EXPLORE</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="grid-item grid-item-2 interactive-hover collection-item" data-title="SOLAR SILHOUETTE"
-                        data-price="₹ 210,000">
+                    <div class="grid-item grid-item-2 interactive-hover collection-item" data-id="solar" data-title="SOLAR SILHOUETTE GOWN" data-price="₹ 210,000">
+                        <span class="grid-item-badge">NO. 02</span>
                         <div class="grid-item-visual"
                             style="background-image: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80');">
                         </div>
                         <div class="grid-item-info">
-                            <span class="grid-item-num">NO. 02</span>
-                            <h3 class="grid-item-name">SOLAR SILHOUETTE</h3>
+                            <div class="grid-item-text-group">
+                                <h3 class="grid-item-name">SOLAR SILHOUETTE</h3>
+                                <span class="grid-item-price-tag">₹ 210,000</span>
+                            </div>
+                            <a href="product-details.html?id=solar" class="grid-item-cta-btn">
+                                <span>EXPLORE</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="grid-item grid-item-3 interactive-hover collection-item" data-title="OBSIDIAN DRAPE"
-                        data-price="₹ 165,000">
+                    <div class="grid-item grid-item-3 interactive-hover collection-item" data-id="obsidian" data-title="OBSIDIAN DRAPE GOWN" data-price="₹ 165,000">
+                        <span class="grid-item-badge">NO. 03</span>
                         <div class="grid-item-visual"
                             style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80');">
                         </div>
                         <div class="grid-item-info">
-                            <span class="grid-item-num">NO. 03</span>
-                            <h3 class="grid-item-name">OBSIDIAN DRAPE</h3>
+                            <div class="grid-item-text-group">
+                                <h3 class="grid-item-name">OBSIDIAN DRAPE</h3>
+                                <span class="grid-item-price-tag">₹ 165,000</span>
+                            </div>
+                            <a href="product-details.html?id=obsidian" class="grid-item-cta-btn">
+                                <span>EXPLORE</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="grid-item grid-item-4 interactive-hover collection-item" data-title="NOCTURNE VELVET"
-                        data-price="₹ 195,000">
+                    <div class="grid-item grid-item-4 interactive-hover collection-item" data-id="nocturne" data-title="NOCTURNE VELVET GOWN" data-price="₹ 195,000">
+                        <span class="grid-item-badge">NO. 04</span>
                         <div class="grid-item-visual"
                             style="background-image: url('https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80');">
                         </div>
                         <div class="grid-item-info">
-                            <span class="grid-item-num">NO. 04</span>
-                            <h3 class="grid-item-name">NOCTURNE VELVET</h3>
+                            <div class="grid-item-text-group">
+                                <h3 class="grid-item-name">NOCTURNE VELVET</h3>
+                                <span class="grid-item-price-tag">₹ 195,000</span>
+                            </div>
+                            <a href="product-details.html?id=nocturne" class="grid-item-cta-btn">
+                                <span>EXPLORE</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -338,34 +365,39 @@
                 <div class="product-gallery">
                     <img class="product-gallery-img"
                         src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1000&q=80"
-                        alt="THE ECLIPSE DRESS HAUTE COUTURE">
+                        alt="THE ECLIPSE GOWN HAUTE COUTURE">
                 </div>
                 <div class="product-details">
-                    <span class="chapter-label">HERO EDITION</span>
-                    <h2 class="chapter-title" style="font-size:2.6rem; margin-bottom:10px;">THE ECLIPSE DRESS</h2>
+                    <span class="chapter-label">CHAPTER VIII — ICONIC PIECE</span>
+                    <h2 class="chapter-title" style="font-size:2.6rem; margin-bottom:10px;">THE ECLIPSE GOWN</h2>
                     <p class="product-price">₹ 185,000</p>
                     <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; font-weight:300;">
-                        An exploration of architectural silhouette, organic fluid movement, and dramatic rim lighting.
-                        Sculpted with midnight silk crepe and structural boning.
+                        An architectural evening gown sculpted from heavy 42-momme Lyon silk crepe. Featuring concealed internal corsetry, bias-cut cascading godets, and hand-finished 24-karat spun gold filament.
                     </p>
 
                     <div class="product-specs">
                         <div class="spec-row">
-                            <span class="spec-label">Material</span>
-                            <span class="spec-val">100% Organic Mulberry Silk Crepe</span>
+                            <span class="spec-label">Fabric</span>
+                            <span class="spec-val">100% Organic Lyon Mulberry Silk (42 Momme)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Craftsmanship</span>
+                            <span class="spec-val">180 Hours of Hand Draping & French Seams</span>
                         </div>
                         <div class="spec-row">
                             <span class="spec-label">Atelier</span>
-                            <span class="spec-val">Handcrafted in Paris</span>
+                            <span class="spec-val">Place Vendôme, Paris 1er</span>
                         </div>
                         <div class="spec-row">
-                            <span class="spec-label">Edition</span>
-                            <span class="spec-val">Limited (12 Bespoke Pieces)</span>
+                            <span class="spec-label">Allocation</span>
+                            <span class="spec-val">Strictly Limited to 12 Bespoke Commissions</span>
                         </div>
                     </div>
 
-                    <button class="btn-luxury magnetic-btn" id="discover-dress-btn"
-                        style="width:100%; margin-top:10px;">DISCOVER THE DRESS</button>
+                    <div style="display:flex; gap:12px; margin-top:10px;">
+                        <a href="product-details.html?id=eclipse" class="btn-luxury magnetic-btn" style="flex:1; text-align:center; text-decoration:none;">DISCOVER CREATION</a>
+                        <button class="btn-luxury magnetic-btn" id="discover-dress-btn" style="flex:1; background:rgba(212,175,55,0.12);">INQUIRE FITTING</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -373,76 +405,75 @@
         <!-- CHAPTER 10: FINAL STATEMENT -->
         <section class="chapter" id="chapter-final">
             <div class="chapter-content">
-                <span class="chapter-label">THE ENDLESS MOMENT</span>
+                <span class="chapter-label">CHAPTER IX — BESPOKE COMMISSION</span>
                 <h2 class="chapter-title" style="font-size: clamp(2.8rem, 5.8vw, 5.8rem);">WEAR THE MOMENT.</h2>
-                <button class="btn-luxury magnetic-btn" id="final-inquire-btn" style="margin-top:20px;">BESPOKE
-                    INQUIRY</button>
+                <p style="font-size:1rem; color:var(--text-secondary); max-width:600px; margin:15px auto 25px; line-height:1.7;">
+                    Experience private salon fittings with our master couturiers in Paris, New York, or arrange for an in-suite bespoke concierge appointment.
+                </p>
+                <button class="btn-luxury magnetic-btn" id="final-inquire-btn" style="margin-top:10px;">REQUEST BESPOKE APPOINTMENT</button>
             </div>
         </section>
 
     </main>
 
-    <!-- WEB3 LUXURY HAUTE COUTURE FOOTER -->
+    <!-- LUXURY HAUTE COUTURE FOOTER -->
     <footer class="footer-web3">
         <div class="footer-grid">
-            <!-- Col 1: Brand & Web3 Status -->
+            <!-- Col 1: Brand & Atelier Provenance -->
             <div class="footer-col-brand">
                 <h3 class="footer-logo">FAUSAN</h3>
                 <div class="web3-badge">
                     <span class="badge-dot"></span>
-                    <span>ETH MAINNET ATELIER #0048</span>
+                    <span>PARIS ATELIER // PLACE VENDÔME</span>
                 </div>
                 <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; max-width:320px;">
-                    A premier digital haute couture house pioneering 3D procedural tailoring, spatial wearables, and
-                    ERC-721 tokenized garment ownership.
+                    Founded in Paris, Maison FAUSAN crafts architectural haute couture combining centuries of French tailoring savoir-faire with contemporary digital craftsmanship and private salon allocations.
                 </p>
             </div>
 
-            <!-- Col 2: Digital Atelier Links -->
+            <!-- Col 2: Atelier Navigation -->
             <div>
-                <h4 class="footer-col-title">ATELIER</h4>
+                <h4 class="footer-col-title">THE ATELIER</h4>
                 <ul class="footer-links">
-                    <li><a href="#chapter-silhouette">3D Silhouette</a></li>
-                    <li><a href="#chapter-fabric">Silk Draping</a></li>
-                    <li><a href="#chapter-collection">Lookbook 2026</a></li>
-                    <li><a href="#chapter-product">The Eclipse Piece</a></li>
-                    <li><a href="#chapter-campaign">Spatial Runway</a></li>
+                    <li><a href="#chapter-silhouette">Sculptural Silhouette</a></li>
+                    <li><a href="#chapter-fabric">Lyon Mulberry Silk</a></li>
+                    <li><a href="#chapter-collection">Collection 2026</a></li>
+                    <li><a href="#chapter-product">The Eclipse Gown</a></li>
+                    <li><a href="#chapter-campaign">Runway Défilé</a></li>
                 </ul>
             </div>
 
-            <!-- Col 3: Web3 Ownership -->
+            <!-- Col 3: Salons & Services -->
             <div>
-                <h4 class="footer-col-title">WEB3 PROTOCOL</h4>
+                <h4 class="footer-col-title">SALONS & SERVICES</h4>
                 <ul class="footer-links">
-                    <li><a href="#">ERC-721 Couture</a></li>
-                    <li><a href="#">Digital Twin Verification</a></li>
-                    <li><a href="#">IPFS Provenance</a></li>
-                    <li><a href="#">Metaverse Wearables</a></li>
-                    <li><a href="#">Smart Concierge</a></li>
+                    <li><a href="#chapter-product">Place Vendôme, Paris</a></li>
+                    <li><a href="#chapter-product">Madison Avenue, New York</a></li>
+                    <li><a href="#chapter-product">Via Montenapoleone, Milan</a></li>
+                    <li><a href="#chapter-product">Bespoke Made-to-Measure</a></li>
+                    <li><a href="#chapter-product">Archival Preservation</a></li>
                 </ul>
             </div>
 
-            <!-- Col 4: Private Whitelist -->
+            <!-- Col 4: Private Privilege -->
             <div>
-                <h4 class="footer-col-title">PRIVATE WHITELIST</h4>
+                <h4 class="footer-col-title">PRIVATE INVITATIONS</h4>
                 <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:15px; line-height:1.5;">
-                    Receive private mint allocations and bespoke Paris atelier fitting invitations.
+                    Receive private invitations to seasonal salon previews and limited atelier allocations.
                 </p>
-                <form id="footer-whitelist-form"
-                    onsubmit="event.preventDefault(); alert('Whitelisted for Bespoke Fitting!');">
-                    <input type="email" class="footer-newsletter-input" placeholder="Enter Wallet / Email..." required>
-                    <button type="submit" class="btn-luxury magnetic-btn" style="width:100%; padding:14px;">JOIN
-                        WHITELIST</button>
+                <form id="footer-whitelist-form">
+                    <input type="email" class="footer-newsletter-input" placeholder="Enter VIP Email Address..." required>
+                    <button type="submit" class="btn-luxury magnetic-btn" style="width:100%; padding:14px;">REQUEST SALON ACCESS</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <div>© 2026 FAUSAN DRESS HAUTE COUTURE. ALL RIGHTS RESERVED.</div>
+            <div>© 2026 MAISON FAUSAN PARIS. ALL RIGHTS RESERVED.</div>
             <div style="display:flex; gap:25px;">
-                <a href="#" style="color:var(--text-secondary); text-decoration:none;">PRIVACY</a>
-                <a href="#" style="color:var(--text-secondary); text-decoration:none;">PROVENANCE</a>
-                <a href="#" style="color:var(--text-secondary); text-decoration:none;">TERMS</a>
+                <a href="#" style="color:var(--text-secondary); text-decoration:none;">PRIVACY POLICY</a>
+                <a href="#" style="color:var(--text-secondary); text-decoration:none;">AUTHENTICITY GUARANTEE</a>
+                <a href="#" style="color:var(--text-secondary); text-decoration:none;">CLIENT SERVICES</a>
             </div>
         </div>
     </footer>
@@ -450,41 +481,107 @@
     <!-- Floating Back to Top Button -->
     <button id="back-to-top">↑ TOP</button>
 
-    <!-- Interactive Bespoke Order & Inquiry Modal -->
+    <!-- Multi-Step Luxury Bespoke Concierge & Allocation Modal -->
     <div class="modal-overlay" id="inquiry-modal">
         <div class="modal-card">
             <button class="modal-close-btn" id="modal-close">✕</button>
-            <span class="chapter-label" style="margin-bottom:8px;">HAUTE COUTURE BESPOKE</span>
-            <h3 class="chapter-title" id="modal-item-title" style="font-size:2.2rem; margin-bottom:10px;">INQUIRE FOR
-                BESPOKE FIT</h3>
-            <p id="modal-item-price"
-                style="color:var(--accent-gold); letter-spacing:2px; font-size:1.05rem; margin-bottom:20px;">₹ 185,000
-            </p>
+            <span class="chapter-label" style="margin-bottom:6px;">PARIS ATELIER PRIVATE CONCIERGE</span>
+            <h3 class="chapter-title" id="modal-item-title" style="font-size:2rem; margin-bottom:6px;">BESPOKE ALLOCATION</h3>
+            <p id="modal-item-price" style="color:var(--accent-gold); letter-spacing:2px; font-size:1rem; margin-bottom:15px;">₹ 185,000</p>
 
-            <form id="inquiry-form">
-                <input type="text" class="modal-input" placeholder="Your Full Name" required>
-                <input type="email" class="modal-input" placeholder="Email Address" required>
+            <!-- Multi-Step Indicator -->
+            <div class="concierge-progress">
+                <div class="step-node active" id="step-node-1">1</div>
+                <div class="step-node" id="step-node-2">2</div>
+                <div class="step-node" id="step-node-3">3</div>
+            </div>
 
-                <span class="spec-label" style="display:block; margin-bottom:10px;">Select Atelier Size:</span>
+            <!-- STEP 1: Garment Sizing & Silhouette Preference -->
+            <div class="concierge-step active" id="concierge-step-1">
+                <span class="spec-label" style="display:block; margin-bottom:10px;">Select Atelier Silhouette & Size:</span>
                 <div class="size-selector">
-                    <button type="button" class="size-btn selected">EU 36</button>
-                    <button type="button" class="size-btn">EU 38</button>
-                    <button type="button" class="size-btn">EU 40</button>
-                    <button type="button" class="size-btn">Bespoke Fitting</button>
+                    <button type="button" class="size-btn selected" data-size="EU 36 (US 4)">EU 36</button>
+                    <button type="button" class="size-btn" data-size="EU 38 (US 6)">EU 38</button>
+                    <button type="button" class="size-btn" data-size="EU 40 (US 8)">EU 40</button>
+                    <button type="button" class="size-btn" data-size="Custom Made-to-Measure">Bespoke Fit</button>
                 </div>
+                <button type="button" class="btn-luxury magnetic-btn" id="step-1-next" style="width:100%; margin-top:20px;">PROCEED TO SALON SELECTION →</button>
+            </div>
 
-                <button type="submit" class="btn-luxury magnetic-btn" style="width:100%;">REQUEST ATELIER
-                    APPOINTMENT</button>
-            </form>
-            <div id="modal-success-msg" style="display:none; text-align:center; padding:30px 0;">
-                <h4
-                    style="font-family:var(--font-title); font-size:1.6rem; color:var(--accent-gold); margin-bottom:10px;">
-                    APPOINTMENT REQUESTED</h4>
-                <p style="color:var(--text-secondary); font-size:0.9rem;">Our Paris Haute Couture atelier concierge will
-                    contact you within 24 hours.</p>
+            <!-- STEP 2: Atelier Salon Location -->
+            <div class="concierge-step" id="concierge-step-2">
+                <span class="spec-label" style="display:block; margin-bottom:10px;">Select Private Fitting Salon:</span>
+                <div class="salon-grid">
+                    <div class="salon-card selected" data-salon="Paris Atelier Flagship (Place Vendôme)">
+                        <h4 class="salon-name">PARIS FLAGSHIP</h4>
+                        <p class="salon-desc">Place Vendôme, Paris 1er. Master tailor fitting.</p>
+                    </div>
+                    <div class="salon-card" data-salon="New York Private Salon (Madison Ave)">
+                        <h4 class="salon-name">NEW YORK SALON</h4>
+                        <p class="salon-desc">Madison Avenue, Manhattan. VIP suite fitting.</p>
+                    </div>
+                    <div class="salon-card" data-salon="Virtual 3D Spatial Fitting Concierge">
+                        <h4 class="salon-name">3D SPATIAL SALON</h4>
+                        <p class="salon-desc">Live Apple Vision Pro & spatial body scan consultation.</p>
+                    </div>
+                    <div class="salon-card" data-salon="Private Residence Courier">
+                        <h4 class="salon-name">PRIVATE RESIDENCE</h4>
+                        <p class="salon-desc">Direct white-glove atelier fitting in your suite.</p>
+                    </div>
+                </div>
+                <div style="display:flex; gap:15px; margin-top:20px;">
+                    <button type="button" class="btn-luxury" id="step-2-prev" style="padding:14px 20px;">← BACK</button>
+                    <button type="button" class="btn-luxury" id="step-2-next" style="flex:1;">CONTINUE TO VIP DETAILS →</button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Client VIP Details -->
+            <div class="concierge-step" id="concierge-step-3">
+                <form id="inquiry-form">
+                    <input type="text" id="client-name" class="modal-input" placeholder="VIP Client Full Name" required>
+                    <input type="email" id="client-email" class="modal-input" placeholder="Email / ENS Address (e.g. vip.eth)" required>
+                    <input type="tel" id="client-phone" class="modal-input" placeholder="Direct Contact Phone (Optional)">
+                    <textarea class="modal-input" id="client-notes" placeholder="Special bespoke measurement notes or preferred calendar dates..." rows="2" style="resize:none;"></textarea>
+                    <div style="display:flex; gap:15px; margin-top:15px;">
+                        <button type="button" class="btn-luxury" id="step-3-prev" style="padding:14px 20px;">← BACK</button>
+                        <button type="submit" class="btn-luxury magnetic-btn" style="flex:1;">SUBMIT BESPOKE ALLOCATION</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- STEP 4: Success & Digital Couture Allocation Pass -->
+            <div id="modal-success-msg" style="display:none; text-align:center; padding:15px 0;">
+                <div class="allocation-pass">
+                    <div class="pass-header">
+                        <span class="pass-id" id="pass-ref-id">#FAUSAN-2026-8821</span>
+                        <span style="font-size:0.75rem; color:var(--accent-gold); letter-spacing:1px;">CONFIRMED</span>
+                    </div>
+                    <div class="pass-row">
+                        <span class="spec-label">Garment</span>
+                        <span class="spec-val" id="pass-garment-title">THE ECLIPSE DRESS</span>
+                    </div>
+                    <div class="pass-row">
+                        <span class="spec-label">Silhouette Size</span>
+                        <span class="spec-val" id="pass-size-val">EU 36</span>
+                    </div>
+                    <div class="pass-row">
+                        <span class="spec-label">Atelier Location</span>
+                        <span class="spec-val" id="pass-salon-val">Paris Flagship</span>
+                    </div>
+                    <div class="pass-row">
+                        <span class="spec-label">Client</span>
+                        <span class="spec-val" id="pass-client-name">VIP Collector</span>
+                    </div>
+                </div>
+                <h4 style="font-family:var(--font-title); font-size:1.4rem; color:var(--accent-gold); margin-bottom:8px;">ALLOCATION REGISTERED</h4>
+                <p style="color:var(--text-secondary); font-size:0.85rem; line-height:1.5;">Our Paris Haute Couture senior atelier concierge has received your dossier and will dispatch an invitation via private concierge channel.</p>
+                <button type="button" class="btn-luxury" id="btn-close-pass" style="margin-top:20px; width:100%;">RETURN TO EXPERIENCE</button>
             </div>
         </div>
     </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
 
     <!--
     ==========================================================================
@@ -970,75 +1067,185 @@
                 .to(dressGroup.scale, { x: 0.2, y: 0.2, z: 0.2 }, 0);
         }
 
+        // ==========================================================================
+        // 4. LUXURY TOAST NOTIFICATION ENGINE
+        // ==========================================================================
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+            const toast = document.createElement('div');
+            toast.className = 'toast-msg';
+            toast.innerHTML = `<span class="toast-gold-dot"></span><span>${message}</span>`;
+            container.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.add('show'));
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 3200);
+        }
+
+        // ==========================================================================
+        // 5. COMPLETE INTERACTIVE USER FLOW CONTROLLER
+        // ==========================================================================
         function initFullUserFlow() {
+            // Multi-Step Atelier Concierge Modal State
             const modal = document.getElementById('inquiry-modal');
             const modalClose = document.getElementById('modal-close');
             const modalTitle = document.getElementById('modal-item-title');
             const modalPrice = document.getElementById('modal-item-price');
-            const inquiryForm = document.getElementById('inquiry-form');
             const successMsg = document.getElementById('modal-success-msg');
+            const btnClosePass = document.getElementById('btn-close-pass');
 
-            const openBtns = [
+            let selectedGarment = "THE ECLIPSE DRESS";
+            let selectedPrice = "₹ 185,000";
+            let selectedSize = "EU 36 (US 4)";
+            let selectedSalon = "Paris Atelier Flagship (Place Vendôme)";
+
+            function setStep(stepNum) {
+                document.querySelectorAll('.concierge-step').forEach(s => s.classList.remove('active'));
+                const targetStep = document.getElementById(`concierge-step-${stepNum}`);
+                if (targetStep) targetStep.classList.add('active');
+
+                // Update Progress Nodes
+                for (let i = 1; i <= 3; i++) {
+                    const node = document.getElementById(`step-node-${i}`);
+                    if (node) {
+                        node.classList.remove('active', 'completed');
+                        if (i === stepNum) node.classList.add('active');
+                        else if (i < stepNum) node.classList.add('completed');
+                    }
+                }
+            }
+
+            // Open Modal Handlers
+            function openBespokeModal(title, price) {
+                selectedGarment = title;
+                selectedPrice = price;
+                if (modalTitle) modalTitle.textContent = title;
+                if (modalPrice) modalPrice.textContent = price;
+                if (successMsg) successMsg.style.display = 'none';
+                document.querySelector('.concierge-progress').style.display = 'flex';
+                setStep(1);
+                if (modal) modal.classList.add('active');
+            }
+
+            const openTriggers = [
                 document.getElementById('nav-inquire-btn'),
                 document.getElementById('mobile-inquire-btn'),
                 document.getElementById('discover-dress-btn'),
                 document.getElementById('final-inquire-btn')
             ];
 
-            openBtns.forEach(btn => {
+            openTriggers.forEach(btn => {
                 if (btn) {
                     btn.addEventListener('click', (e) => {
                         e.preventDefault();
-                        openModal("THE ECLIPSE DRESS", "₹ 185,000");
+                        openBespokeModal("THE ECLIPSE DRESS", "₹ 185,000");
                     });
                 }
             });
 
+            // Collection Grid Click to Open Modal
             const collectionItems = document.querySelectorAll('.collection-item');
             collectionItems.forEach(item => {
                 item.addEventListener('click', () => {
                     const title = item.getAttribute('data-title') || "HAUTE COUTURE PIECE";
                     const price = item.getAttribute('data-price') || "INQUIRE FOR PRICE";
-                    openModal(title, price);
+                    openBespokeModal(title, price);
                 });
             });
 
-            function openModal(title, price) {
-                if (modalTitle) modalTitle.textContent = title;
-                if (modalPrice) modalPrice.textContent = price;
-                if (inquiryForm) inquiryForm.style.display = 'block';
-                if (successMsg) successMsg.style.display = 'none';
-                if (modal) modal.classList.add('active');
+            // Step 1: Size Selector
+            const sizeBtns = document.querySelectorAll('.size-btn');
+            sizeBtns.forEach(sb => {
+                sb.addEventListener('click', () => {
+                    sizeBtns.forEach(b => b.classList.remove('selected'));
+                    sb.classList.add('selected');
+                    selectedSize = sb.getAttribute('data-size') || sb.textContent;
+                });
+            });
+
+            const step1Next = document.getElementById('step-1-next');
+            if (step1Next) step1Next.addEventListener('click', () => setStep(2));
+
+            // Step 2: Salon Selector
+            const salonCards = document.querySelectorAll('.salon-card');
+            salonCards.forEach(sc => {
+                sc.addEventListener('click', () => {
+                    salonCards.forEach(c => c.classList.remove('selected'));
+                    sc.classList.add('selected');
+                    selectedSalon = sc.getAttribute('data-salon') || sc.querySelector('.salon-name').textContent;
+                });
+            });
+
+            const step2Prev = document.getElementById('step-2-prev');
+            if (step2Prev) step2Prev.addEventListener('click', () => setStep(1));
+            const step2Next = document.getElementById('step-2-next');
+            if (step2Next) step2Next.addEventListener('click', () => setStep(3));
+
+            // Step 3: Submission & Allocation Pass Generation
+            const step3Prev = document.getElementById('step-3-prev');
+            if (step3Prev) step3Prev.addEventListener('click', () => setStep(2));
+
+            const inquiryForm = document.getElementById('inquiry-form');
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const clientName = document.getElementById('client-name').value || "VIP Collector";
+                    const randomRef = Math.floor(1000 + Math.random() * 9000);
+                    const refId = `#FAUSAN-2026-${randomRef}`;
+
+                    // Update Allocation Pass Fields
+                    const passRef = document.getElementById('pass-ref-id');
+                    const passGarment = document.getElementById('pass-garment-title');
+                    const passSize = document.getElementById('pass-size-val');
+                    const passSalon = document.getElementById('pass-salon-val');
+                    const passClient = document.getElementById('pass-client-name');
+
+                    if (passRef) passRef.textContent = refId;
+                    if (passGarment) passGarment.textContent = selectedGarment;
+                    if (passSize) passSize.textContent = selectedSize;
+                    if (passSalon) passSalon.textContent = selectedSalon;
+                    if (passClient) passClient.textContent = clientName;
+
+                    document.querySelectorAll('.concierge-step').forEach(s => s.classList.remove('active'));
+                    document.querySelector('.concierge-progress').style.display = 'none';
+                    if (successMsg) successMsg.style.display = 'block';
+
+                    showToast(`Bespoke Allocation ${refId} Confirmed!`);
+                });
             }
 
+            // Close Modal Handlers
             if (modalClose) {
                 modalClose.addEventListener('click', () => {
                     if (modal) modal.classList.remove('active');
                 });
             }
-
+            if (btnClosePass) {
+                btnClosePass.addEventListener('click', () => {
+                    if (modal) modal.classList.remove('active');
+                });
+            }
             if (modal) {
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) modal.classList.remove('active');
                 });
             }
 
-            const sizeBtns = document.querySelectorAll('.size-btn');
-            sizeBtns.forEach(sb => {
-                sb.addEventListener('click', () => {
-                    sizeBtns.forEach(b => b.classList.remove('selected'));
-                    sb.classList.add('selected');
-                });
-            });
-
-            if (inquiryForm) {
-                inquiryForm.addEventListener('submit', (e) => {
+            // Footer Whitelist Form Submission
+            const footerForm = document.getElementById('footer-whitelist-form');
+            if (footerForm) {
+                footerForm.addEventListener('submit', (e) => {
                     e.preventDefault();
-                    inquiryForm.style.display = 'none';
-                    if (successMsg) successMsg.style.display = 'block';
+                    const input = footerForm.querySelector('.footer-newsletter-input');
+                    const val = input ? input.value : "";
+                    if (input) input.value = "";
+                    showToast(`✨ Whitelisted: ${val || "VIP Collector"} added to Private Mint Queue.`);
                 });
             }
 
+            // Mobile Navigation Toggle
             const mobileBtn = document.getElementById('mobile-toggle');
             const mobileNav = document.getElementById('mobile-nav');
             const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -1057,6 +1264,7 @@
                 });
             }
 
+            // Desktop Luxury Gold Cursor & Magnetics
             const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
             const cursorDot = document.getElementById('cursor-dot');
             const cursorRing = document.getElementById('cursor-ring');
@@ -1079,7 +1287,7 @@
                 }
                 renderCursor();
 
-                const hoverTargets = document.querySelectorAll('.interactive-hover, .btn-luxury, .nav-links a');
+                const hoverTargets = document.querySelectorAll('.interactive-hover, .btn-luxury, .nav-links a, .swatch-btn, .hud-tool-btn, .sound-toggle-btn');
                 hoverTargets.forEach(el => {
                     el.addEventListener('mouseenter', () => cursorRing.classList.add('hovered'));
                     el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovered'));
@@ -1108,6 +1316,7 @@
             initFullUserFlow();
         });
     </script>
+    <script src="assets/js/cart.js"></script>
 </body>
 
 </html>

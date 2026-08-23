@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed — FAUSAN Haute Couture</title>
+    <meta name="description" content="Thank you for your bespoke haute couture acquisition with FAUSAN. Your order and provenance certificate have been registered.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Atmospheric Overlays -->
+    <div class="overlay-grain"></div>
+    <div class="overlay-vignette"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar sticky">
+        <a href="index.html" class="nav-logo magnetic-btn">FAUSAN</a>
+        <ul class="nav-links">
+            <li><a href="index.html#chapter-silhouette">SILHOUETTE</a></li>
+            <li><a href="index.html#chapter-collection">COLLECTION</a></li>
+            <li><a href="index.html#chapter-product">ECLIPSE</a></li>
+        </ul>
+        <a href="index.html" class="btn-luxury" style="padding:10px 20px; font-size:0.7rem; text-decoration:none;">
+            RETURN TO ATELIER
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="ecom-page-wrapper" style="padding-top:140px;">
+        <div class="thankyou-card">
+            <div class="gold-success-ring">✓</div>
+            <span class="chapter-label" style="margin-bottom:8px;">BESPOKE COMMISSION CONFIRMED</span>
+            <h1 class="chapter-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom:12px;">THANK YOU FOR YOUR PATRONAGE</h1>
+            <span class="thankyou-order-id" id="ty-order-id">#FAUSAN-2026-8821</span>
+            
+            <p style="color:#C5C4BF; font-size:0.95rem; line-height:1.7; max-width:620px; margin:0 auto 35px; font-weight:300;">
+                Your bespoke tailoring dossier has been registered with our senior Parisian master couturiers. A formal commission dispatch and private salon fitting schedule have been sent to <strong id="ty-email" style="color:var(--text-primary);">your email</strong>.
+            </p>
+
+            <!-- Order Timeline Progress -->
+            <div class="order-timeline-tracker">
+                <div class="timeline-step">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-step-label">COMMISSION ALLOCATED</span>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-step-label">PARIS ATELIER CUTTING</span>
+                </div>
+                <div class="timeline-step pending">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-step-label">SALON FITTING</span>
+                </div>
+                <div class="timeline-step pending">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-step-label">WHITE-GLOVE DISPATCH</span>
+                </div>
+            </div>
+
+            <!-- Digital Couture Allocation Pass -->
+            <div class="allocation-pass" style="max-width:550px; margin:35px auto 40px;">
+                <div class="pass-header">
+                    <span class="pass-id" id="pass-cert-id">MAISON FAUSAN // ARCHIVE CERTIFICATE #0048</span>
+                    <span style="font-size:0.75rem; color:var(--accent-gold); letter-spacing:1px;">REGISTERED</span>
+                </div>
+                <div class="pass-row">
+                    <span class="spec-label">Client</span>
+                    <span class="spec-val" id="ty-client-name">VIP Client</span>
+                </div>
+                <div class="pass-row">
+                    <span class="spec-label">Acquisitions</span>
+                    <span class="spec-val" id="ty-items-count">1 Bespoke Haute Couture Piece</span>
+                </div>
+                <div class="pass-row">
+                    <span class="spec-label">Delivery Channel</span>
+                    <span class="spec-val" id="ty-shipping">White-Glove Insured Courier</span>
+                </div>
+                <div class="pass-row">
+                    <span class="spec-label">Total Commission</span>
+                    <span class="spec-val" id="ty-total-paid" style="color:var(--accent-gold); font-weight:600;">₹ 185,000</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                <button type="button" class="btn-luxury" onclick="window.print();">PRINT ATELIER DOSSIER</button>
+                <a href="index.html" class="btn-add-bag" style="text-decoration:none; padding:18px 40px;">RETURN TO ATELIER</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Luxury Footer -->
+    <footer class="footer-web3" style="margin-top:60px;">
+        <div class="footer-bottom">
+            <div>© 2026 MAISON FAUSAN PARIS. ALL RIGHTS RESERVED.</div>
+            <div>PARIS • NEW YORK • MILAN • TOKYO</div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart.js"></script>
+    <script>
+        const lastOrder = JSON.parse(localStorage.getItem('fausan_last_order') || '{}');
+
+        if (lastOrder.orderId) {
+            document.getElementById('ty-order-id').textContent = lastOrder.orderId;
+            document.getElementById('ty-email').textContent = lastOrder.email || 'your email';
+            document.getElementById('ty-client-name').textContent = lastOrder.clientName || 'VIP Collector';
+            document.getElementById('ty-shipping').textContent = lastOrder.shipping || 'White-Glove Courier';
+            document.getElementById('ty-total-paid').textContent = lastOrder.formattedTotal || '₹ 185,000';
+            
+            const count = lastOrder.items ? lastOrder.items.reduce((s, i) => s + i.quantity, 0) : 1;
+            document.getElementById('ty-items-count').textContent = `${count} Haute Couture Piece${count > 1 ? 's' : ''}`;
+        }
+    </script>
+</body>
+
+</html>
